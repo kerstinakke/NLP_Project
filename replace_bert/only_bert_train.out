@@ -1,0 +1,1293 @@
+2019-06-07 02:44:55,548 - INFO - pytorch_pretrained_bert.modeling - Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex .
+/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/sklearn/utils/linear_assignment_.py:21: DeprecationWarning: The linear_assignment_ module is deprecated in 0.21 and will be removed from 0.23. Use scipy.optimize.linear_sum_assignment instead.
+  DeprecationWarning)
+2019-06-07 02:44:59,368 - INFO - allennlp.common.params - random_seed = 13370
+2019-06-07 02:44:59,368 - INFO - allennlp.common.params - numpy_seed = 1337
+2019-06-07 02:44:59,368 - INFO - allennlp.common.params - pytorch_seed = 133
+2019-06-07 02:45:00,966 - INFO - allennlp.common.checks - Pytorch version: 0.4.1.post2
+2019-06-07 02:45:00,969 - INFO - allennlp.common.params - evaluate_on_test = False
+2019-06-07 02:45:00,970 - INFO - allennlp.common.params - validation_dataset_reader = None
+2019-06-07 02:45:00,970 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'token_indexers': {'bert': {'do_lowercase': True, 'pretrained_model': 'bert-base-uncased', 'truncate_long_sequences': False, 'type': 'bert-pretrained'}}, 'type': 'squad'} and extras set()
+2019-06-07 02:45:00,970 - INFO - allennlp.common.params - dataset_reader.type = squad
+2019-06-07 02:45:00,971 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.reading_comprehension.squad.SquadReader'> from params {'token_indexers': {'bert': {'do_lowercase': True, 'pretrained_model': 'bert-base-uncased', 'truncate_long_sequences': False, 'type': 'bert-pretrained'}}} and extras set()
+2019-06-07 02:45:00,971 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'do_lowercase': True, 'pretrained_model': 'bert-base-uncased', 'truncate_long_sequences': False, 'type': 'bert-pretrained'} and extras set()
+2019-06-07 02:45:00,971 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.type = bert-pretrained
+2019-06-07 02:45:00,971 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.wordpiece_indexer.PretrainedBertIndexer from params {'do_lowercase': True, 'pretrained_model': 'bert-base-uncased', 'truncate_long_sequences': False} and extras set()
+2019-06-07 02:45:00,971 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.pretrained_model = bert-base-uncased
+2019-06-07 02:45:00,972 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.use_starting_offsets = False
+2019-06-07 02:45:00,972 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.do_lowercase = True
+2019-06-07 02:45:00,972 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.never_lowercase = None
+2019-06-07 02:45:00,972 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.max_pieces = 512
+2019-06-07 02:45:00,972 - INFO - allennlp.common.params - dataset_reader.token_indexers.bert.truncate_long_sequences = False
+2019-06-07 02:45:01,533 - INFO - pytorch_pretrained_bert.tokenization - loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /gpfs/hpchome/kakke/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+2019-06-07 02:45:01,592 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2019-06-07 02:45:01,593 - INFO - allennlp.common.params - dataset_reader.passage_length_limit = None
+2019-06-07 02:45:01,593 - INFO - allennlp.common.params - dataset_reader.question_length_limit = None
+2019-06-07 02:45:01,593 - INFO - allennlp.common.params - dataset_reader.skip_invalid_examples = False
+2019-06-07 02:45:01,898 - INFO - allennlp.common.params - train_data_path = https://s3-us-west-2.amazonaws.com/allennlp/datasets/squad/squad-train-v1.1.json
+2019-06-07 02:45:01,902 - INFO - allennlp.training.util - Reading training data from https://s3-us-west-2.amazonaws.com/allennlp/datasets/squad/squad-train-v1.1.json
+0it [00:00, ?it/s]
+2019-06-07 02:45:02,818 - INFO - allennlp.data.dataset_readers.reading_comprehension.squad - Reading file at /gpfs/hpchome/kakke/.allennlp/cache/9d71029aaa0756c2c61776d338b30948212e767f2753f159df0f8fe1dd4267ff.ecb722fee55bf415b85baaa96fa6da0785e392b5d122301c710b06bf51f7bdc3
+2019-06-07 02:45:03,522 - INFO - allennlp.data.dataset_readers.reading_comprehension.squad - Reading the dataset
+8792it [00:10, 879.19it/s]
+19392it [00:20, 926.60it/s]
+29992it [00:30, 945.72it/s]
+39928it [00:41, 945.35it/s]
+49557it [00:51, 950.50it/s]
+59480it [01:01, 962.62it/s]
+69402it [01:12, 942.48it/s]
+78591it [01:22, 935.27it/s]
+87599it [01:30, 964.07it/s]
+
+2019-06-07 02:46:32,767 - INFO - allennlp.common.params - validation_data_path = https://s3-us-west-2.amazonaws.com/allennlp/datasets/squad/squad-dev-v1.1.json
+2019-06-07 02:46:32,767 - INFO - allennlp.training.util - Reading validation data from https://s3-us-west-2.amazonaws.com/allennlp/datasets/squad/squad-dev-v1.1.json
+0it [00:00, ?it/s]
+2019-06-07 02:46:33,621 - INFO - allennlp.data.dataset_readers.reading_comprehension.squad - Reading file at /gpfs/hpchome/kakke/.allennlp/cache/c95de59a40dcddbf0ec0cf935b5a98b51a027920ec34ad20e930a8a7a710fcb2.59d8c2ca3fa946cc02db572aec4395c09c9477e1fbcd8fd7b86d9a3e1d580e0a
+2019-06-07 02:46:33,702 - INFO - allennlp.data.dataset_readers.reading_comprehension.squad - Reading the dataset
+9323it [00:10, 932.15it/s]
+10570it [00:13, 802.34it/s]
+
+2019-06-07 02:46:45,942 - INFO - allennlp.common.params - test_data_path = None
+2019-06-07 02:46:46,146 - INFO - allennlp.training.trainer - From dataset instances, train, validation will be considered for vocabulary creation.
+2019-06-07 02:46:46,146 - INFO - allennlp.common.params - vocabulary.type = None
+2019-06-07 02:46:46,146 - INFO - allennlp.common.params - vocabulary.extend = False
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.min_count = None
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2019-06-07 02:46:46,147 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2019-06-07 02:46:46,147 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+0it [00:00, ?it/s]
+98169it [00:02, 38111.25it/s]
+
+2019-06-07 02:46:48,724 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'dropout': 0.2, 'modeling_layer': {'bidirectional': True, 'dropout': 0.2, 'hidden_size': 100, 'input_size': 800, 'num_layers': 2, 'type': 'lstm'}, 'num_highway_layers': 2, 'phrase_layer': {'bidirectional': True, 'hidden_size': 100, 'input_size': 768, 'num_layers': 1, 'type': 'lstm'}, 'similarity_function': {'combination': 'x,y,x*y', 'tensor_1_dim': 200, 'tensor_2_dim': 200, 'type': 'linear'}, 'span_end_encoder': {'bidirectional': True, 'hidden_size': 100, 'input_size': 1400, 'num_layers': 1, 'type': 'lstm'}, 'text_field_embedder': {'allow_unmatched_keys': True, 'embedder_to_indexer_map': {'bert': ['bert', 'bert-offsets']}, 'token_embedders': {'bert': {'pretrained_model': 'bert-base-uncased', 'requires_grad': False, 'type': 'bert-pretrained'}}}, 'type': 'bidaf'} and extras {'vocab'}
+2019-06-07 02:46:48,724 - INFO - allennlp.common.params - model.type = bidaf
+2019-06-07 02:46:48,724 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.reading_comprehension.bidaf.BidirectionalAttentionFlow'> from params {'dropout': 0.2, 'modeling_layer': {'bidirectional': True, 'dropout': 0.2, 'hidden_size': 100, 'input_size': 800, 'num_layers': 2, 'type': 'lstm'}, 'num_highway_layers': 2, 'phrase_layer': {'bidirectional': True, 'hidden_size': 100, 'input_size': 768, 'num_layers': 1, 'type': 'lstm'}, 'similarity_function': {'combination': 'x,y,x*y', 'tensor_1_dim': 200, 'tensor_2_dim': 200, 'type': 'linear'}, 'span_end_encoder': {'bidirectional': True, 'hidden_size': 100, 'input_size': 1400, 'num_layers': 1, 'type': 'lstm'}, 'text_field_embedder': {'allow_unmatched_keys': True, 'embedder_to_indexer_map': {'bert': ['bert', 'bert-offsets']}, 'token_embedders': {'bert': {'pretrained_model': 'bert-base-uncased', 'requires_grad': False, 'type': 'bert-pretrained'}}}} and extras {'vocab'}
+2019-06-07 02:46:48,725 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'allow_unmatched_keys': True, 'embedder_to_indexer_map': {'bert': ['bert', 'bert-offsets']}, 'token_embedders': {'bert': {'pretrained_model': 'bert-base-uncased', 'requires_grad': False, 'type': 'bert-pretrained'}}} and extras {'vocab'}
+2019-06-07 02:46:48,725 - INFO - allennlp.common.params - model.text_field_embedder.type = basic
+2019-06-07 02:46:48,725 - INFO - allennlp.common.params - model.text_field_embedder.allow_unmatched_keys = True
+2019-06-07 02:46:48,725 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'pretrained_model': 'bert-base-uncased', 'requires_grad': False, 'type': 'bert-pretrained'} and extras {'vocab'}
+2019-06-07 02:46:48,725 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.bert.type = bert-pretrained
+2019-06-07 02:46:48,726 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.bert_token_embedder.PretrainedBertEmbedder'> from params {'pretrained_model': 'bert-base-uncased', 'requires_grad': False} and extras {'vocab'}
+2019-06-07 02:46:48,726 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.bert.pretrained_model = bert-base-uncased
+2019-06-07 02:46:48,726 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.bert.requires_grad = False
+2019-06-07 02:46:48,726 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.bert.top_layer_only = False
+2019-06-07 02:46:49,276 - INFO - pytorch_pretrained_bert.modeling - loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /gpfs/hpchome/kakke/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+2019-06-07 02:46:49,279 - INFO - pytorch_pretrained_bert.modeling - extracting archive file /gpfs/hpchome/kakke/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /tmp/tmplncjitu_
+2019-06-07 02:46:53,582 - INFO - pytorch_pretrained_bert.modeling - Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2019-06-07 02:46:55,990 - INFO - allennlp.common.params - model.num_highway_layers = 2
+2019-06-07 02:46:55,991 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'hidden_size': 100, 'input_size': 768, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab'}
+2019-06-07 02:46:55,991 - INFO - allennlp.common.params - model.phrase_layer.type = lstm
+2019-06-07 02:46:55,991 - INFO - allennlp.common.params - model.phrase_layer.batch_first = True
+2019-06-07 02:46:55,991 - INFO - allennlp.common.params - model.phrase_layer.stateful = False
+2019-06-07 02:46:55,991 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2019-06-07 02:46:55,991 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2019-06-07 02:46:55,992 - INFO - allennlp.common.params - model.phrase_layer.bidirectional = True
+2019-06-07 02:46:55,992 - INFO - allennlp.common.params - model.phrase_layer.hidden_size = 100
+2019-06-07 02:46:55,992 - INFO - allennlp.common.params - model.phrase_layer.input_size = 768
+2019-06-07 02:46:55,992 - INFO - allennlp.common.params - model.phrase_layer.num_layers = 1
+2019-06-07 02:46:55,992 - INFO - allennlp.common.params - model.phrase_layer.batch_first = True
+2019-06-07 02:46:55,998 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.similarity_functions.similarity_function.SimilarityFunction'> from params {'combination': 'x,y,x*y', 'tensor_1_dim': 200, 'tensor_2_dim': 200, 'type': 'linear'} and extras {'vocab'}
+2019-06-07 02:46:55,998 - INFO - allennlp.common.params - model.similarity_function.type = linear
+2019-06-07 02:46:55,999 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.similarity_functions.linear.LinearSimilarity'> from params {'combination': 'x,y,x*y', 'tensor_1_dim': 200, 'tensor_2_dim': 200} and extras {'vocab'}
+2019-06-07 02:46:55,999 - INFO - allennlp.common.params - model.similarity_function.tensor_1_dim = 200
+2019-06-07 02:46:55,999 - INFO - allennlp.common.params - model.similarity_function.tensor_2_dim = 200
+2019-06-07 02:46:55,999 - INFO - allennlp.common.params - model.similarity_function.combination = x,y,x*y
+2019-06-07 02:46:56,000 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'dropout': 0.2, 'hidden_size': 100, 'input_size': 800, 'num_layers': 2, 'type': 'lstm'} and extras {'vocab'}
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - model.modeling_layer.type = lstm
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - model.modeling_layer.batch_first = True
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - model.modeling_layer.stateful = False
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - model.modeling_layer.bidirectional = True
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - model.modeling_layer.dropout = 0.2
+2019-06-07 02:46:56,000 - INFO - allennlp.common.params - model.modeling_layer.hidden_size = 100
+2019-06-07 02:46:56,001 - INFO - allennlp.common.params - model.modeling_layer.input_size = 800
+2019-06-07 02:46:56,001 - INFO - allennlp.common.params - model.modeling_layer.num_layers = 2
+2019-06-07 02:46:56,001 - INFO - allennlp.common.params - model.modeling_layer.batch_first = True
+2019-06-07 02:46:56,010 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'hidden_size': 100, 'input_size': 1400, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab'}
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.type = lstm
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.batch_first = True
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.stateful = False
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.bidirectional = True
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.hidden_size = 100
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.input_size = 1400
+2019-06-07 02:46:56,011 - INFO - allennlp.common.params - model.span_end_encoder.num_layers = 1
+2019-06-07 02:46:56,012 - INFO - allennlp.common.params - model.span_end_encoder.batch_first = True
+2019-06-07 02:46:56,024 - INFO - allennlp.common.params - model.dropout = 0.2
+2019-06-07 02:46:56,024 - INFO - allennlp.common.params - model.mask_lstms = True
+2019-06-07 02:46:56,048 - INFO - allennlp.nn.initializers - Initializing parameters
+2019-06-07 02:46:56,049 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.0.bias
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.0.weight
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.1.bias
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.1.weight
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _matrix_attention._similarity_function._bias
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _matrix_attention._similarity_function._weight_vector
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l0
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l0_reverse
+2019-06-07 02:46:56,050 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l1
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l1_reverse
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l0
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l0_reverse
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l1
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l1_reverse
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l0
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l0_reverse
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l1
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l1_reverse
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l0
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l0_reverse
+2019-06-07 02:46:56,051 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l1
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l1_reverse
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_hh_l0
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_hh_l0_reverse
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_ih_l0
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_ih_l0_reverse
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_hh_l0
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_hh_l0_reverse
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_ih_l0
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_ih_l0_reverse
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_hh_l0
+2019-06-07 02:46:56,052 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_hh_l0_reverse
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_ih_l0
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_ih_l0_reverse
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_hh_l0
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_hh_l0_reverse
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_ih_l0
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_ih_l0_reverse
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_predictor._module.bias
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_end_predictor._module.weight
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_start_predictor._module.bias
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _span_start_predictor._module.weight
+2019-06-07 02:46:56,053 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.gamma
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.0
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.1
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.10
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.11
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.2
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.3
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.4
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.5
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.6
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.7
+2019-06-07 02:46:56,054 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.8
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.9
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.embeddings.LayerNorm.bias
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.embeddings.LayerNorm.weight
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.embeddings.position_embeddings.weight
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.embeddings.token_type_embeddings.weight
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.embeddings.word_embeddings.weight
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.dense.bias
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.dense.weight
+2019-06-07 02:46:56,055 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.key.bias
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.key.weight
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.query.bias
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.query.weight
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.value.bias
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.value.weight
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.intermediate.dense.bias
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.intermediate.dense.weight
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.LayerNorm.bias
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.LayerNorm.weight
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.dense.bias
+2019-06-07 02:46:56,056 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.dense.weight
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.dense.bias
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.dense.weight
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.key.bias
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.key.weight
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.query.bias
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.query.weight
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.value.bias
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.value.weight
+2019-06-07 02:46:56,057 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.intermediate.dense.bias
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.intermediate.dense.weight
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.LayerNorm.bias
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.LayerNorm.weight
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.dense.bias
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.dense.weight
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.dense.bias
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.dense.weight
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.key.bias
+2019-06-07 02:46:56,058 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.key.weight
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.query.bias
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.query.weight
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.value.bias
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.value.weight
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.intermediate.dense.bias
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.intermediate.dense.weight
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.LayerNorm.bias
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.LayerNorm.weight
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.dense.bias
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.dense.weight
+2019-06-07 02:46:56,059 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.dense.bias
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.dense.weight
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.key.bias
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.key.weight
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.query.bias
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.query.weight
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.value.bias
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.value.weight
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.intermediate.dense.bias
+2019-06-07 02:46:56,060 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.intermediate.dense.weight
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.LayerNorm.bias
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.LayerNorm.weight
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.dense.bias
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.dense.weight
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.dense.bias
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.dense.weight
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.key.bias
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.key.weight
+2019-06-07 02:46:56,061 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.query.bias
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.query.weight
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.value.bias
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.value.weight
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.intermediate.dense.bias
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.intermediate.dense.weight
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.LayerNorm.bias
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.LayerNorm.weight
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.dense.bias
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.dense.weight
+2019-06-07 02:46:56,062 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.dense.bias
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.dense.weight
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.key.bias
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.key.weight
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.query.bias
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.query.weight
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.value.bias
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.value.weight
+2019-06-07 02:46:56,063 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.intermediate.dense.bias
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.intermediate.dense.weight
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.LayerNorm.bias
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.LayerNorm.weight
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.dense.bias
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.dense.weight
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.dense.bias
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.dense.weight
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.key.bias
+2019-06-07 02:46:56,064 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.key.weight
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.query.bias
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.query.weight
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.value.bias
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.value.weight
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.intermediate.dense.bias
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.intermediate.dense.weight
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.LayerNorm.bias
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.LayerNorm.weight
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.dense.bias
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.dense.weight
+2019-06-07 02:46:56,065 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.dense.bias
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.dense.weight
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.key.bias
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.key.weight
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.query.bias
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.query.weight
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.value.bias
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.value.weight
+2019-06-07 02:46:56,066 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.intermediate.dense.bias
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.intermediate.dense.weight
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.LayerNorm.bias
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.LayerNorm.weight
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.dense.bias
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.dense.weight
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.dense.bias
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.dense.weight
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.key.bias
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.key.weight
+2019-06-07 02:46:56,067 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.query.bias
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.query.weight
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.value.bias
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.value.weight
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.intermediate.dense.bias
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.intermediate.dense.weight
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.LayerNorm.bias
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.LayerNorm.weight
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.dense.bias
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.dense.weight
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,068 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.dense.bias
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.dense.weight
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.key.bias
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.key.weight
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.query.bias
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.query.weight
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.value.bias
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.value.weight
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.intermediate.dense.bias
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.intermediate.dense.weight
+2019-06-07 02:46:56,069 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.LayerNorm.bias
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.LayerNorm.weight
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.dense.bias
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.dense.weight
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.dense.bias
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.dense.weight
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.key.bias
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.key.weight
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.query.bias
+2019-06-07 02:46:56,070 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.query.weight
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.value.bias
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.value.weight
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.intermediate.dense.bias
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.intermediate.dense.weight
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.LayerNorm.bias
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.LayerNorm.weight
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.dense.bias
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.dense.weight
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.dense.bias
+2019-06-07 02:46:56,071 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.dense.weight
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.key.bias
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.key.weight
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.query.bias
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.query.weight
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.value.bias
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.value.weight
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.intermediate.dense.bias
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.intermediate.dense.weight
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.LayerNorm.bias
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.LayerNorm.weight
+2019-06-07 02:46:56,072 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.dense.bias
+2019-06-07 02:46:56,073 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.dense.weight
+2019-06-07 02:46:56,073 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.pooler.dense.bias
+2019-06-07 02:46:56,073 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_bert.bert_model.pooler.dense.weight
+2019-06-07 02:46:56,076 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.data_iterator.DataIterator'> from params {'batch_size': 40, 'sorting_keys': [['passage', 'num_tokens'], ['question', 'num_tokens']], 'type': 'bucket'} and extras set()
+2019-06-07 02:46:56,076 - INFO - allennlp.common.params - iterator.type = bucket
+2019-06-07 02:46:56,076 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.bucket_iterator.BucketIterator'> from params {'batch_size': 40, 'sorting_keys': [['passage', 'num_tokens'], ['question', 'num_tokens']]} and extras set()
+2019-06-07 02:46:56,076 - INFO - allennlp.common.params - iterator.sorting_keys = [['passage', 'num_tokens'], ['question', 'num_tokens']]
+2019-06-07 02:46:56,076 - INFO - allennlp.common.params - iterator.padding_noise = 0.1
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.biggest_batch_first = False
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.batch_size = 40
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.cache_instances = False
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.track_epoch = False
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - iterator.maximum_samples_per_batch = None
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - validation_iterator = None
+2019-06-07 02:46:56,077 - INFO - allennlp.common.params - trainer.no_grad = ()
+2019-06-07 02:46:56,079 - INFO - allennlp.training.trainer - Following parameters are Frozen  (without gradient):
+2019-06-07 02:46:56,079 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.embeddings.word_embeddings.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.embeddings.position_embeddings.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.embeddings.token_type_embeddings.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.embeddings.LayerNorm.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.embeddings.LayerNorm.bias
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.query.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.query.bias
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.key.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.key.bias
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.value.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.self.value.bias
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.dense.weight
+2019-06-07 02:46:56,080 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.dense.bias
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.intermediate.dense.weight
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.intermediate.dense.bias
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.dense.weight
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.dense.bias
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.LayerNorm.weight
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.0.output.LayerNorm.bias
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.query.weight
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.query.bias
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.key.weight
+2019-06-07 02:46:56,081 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.key.bias
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.value.weight
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.self.value.bias
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.dense.weight
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.dense.bias
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.intermediate.dense.weight
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.intermediate.dense.bias
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.dense.weight
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.dense.bias
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.LayerNorm.weight
+2019-06-07 02:46:56,082 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.1.output.LayerNorm.bias
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.query.weight
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.query.bias
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.key.weight
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.key.bias
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.value.weight
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.self.value.bias
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.dense.weight
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.dense.bias
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.intermediate.dense.weight
+2019-06-07 02:46:56,083 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.intermediate.dense.bias
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.dense.weight
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.dense.bias
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.LayerNorm.weight
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.2.output.LayerNorm.bias
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.query.weight
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.query.bias
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.key.weight
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.key.bias
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.value.weight
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.self.value.bias
+2019-06-07 02:46:56,084 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.dense.weight
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.dense.bias
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.intermediate.dense.weight
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.intermediate.dense.bias
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.dense.weight
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.dense.bias
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.LayerNorm.weight
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.3.output.LayerNorm.bias
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.query.weight
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.query.bias
+2019-06-07 02:46:56,085 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.key.weight
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.key.bias
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.value.weight
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.self.value.bias
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.dense.weight
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.dense.bias
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.intermediate.dense.weight
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.intermediate.dense.bias
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.dense.weight
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.dense.bias
+2019-06-07 02:46:56,086 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.LayerNorm.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.4.output.LayerNorm.bias
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.query.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.query.bias
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.key.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.key.bias
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.value.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.self.value.bias
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.dense.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.dense.bias
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.intermediate.dense.weight
+2019-06-07 02:46:56,087 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.intermediate.dense.bias
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.dense.weight
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.dense.bias
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.LayerNorm.weight
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.5.output.LayerNorm.bias
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.query.weight
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.query.bias
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.key.weight
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.key.bias
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.value.weight
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.self.value.bias
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.dense.weight
+2019-06-07 02:46:56,088 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.dense.bias
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.intermediate.dense.weight
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.intermediate.dense.bias
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.dense.weight
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.dense.bias
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.LayerNorm.weight
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.6.output.LayerNorm.bias
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.query.weight
+2019-06-07 02:46:56,089 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.query.bias
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.key.weight
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.key.bias
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.value.weight
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.self.value.bias
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.dense.weight
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.dense.bias
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.intermediate.dense.weight
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.intermediate.dense.bias
+2019-06-07 02:46:56,090 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.dense.weight
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.dense.bias
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.LayerNorm.weight
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.7.output.LayerNorm.bias
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.query.weight
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.query.bias
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.key.weight
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.key.bias
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.value.weight
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.self.value.bias
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.dense.weight
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.dense.bias
+2019-06-07 02:46:56,091 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.intermediate.dense.weight
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.intermediate.dense.bias
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.dense.weight
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.dense.bias
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.LayerNorm.weight
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.8.output.LayerNorm.bias
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.query.weight
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.query.bias
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.key.weight
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.key.bias
+2019-06-07 02:46:56,092 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.value.weight
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.self.value.bias
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.dense.weight
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.dense.bias
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.intermediate.dense.weight
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.intermediate.dense.bias
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.dense.weight
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.dense.bias
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.LayerNorm.weight
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.9.output.LayerNorm.bias
+2019-06-07 02:46:56,093 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.query.weight
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.query.bias
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.key.weight
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.key.bias
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.value.weight
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.self.value.bias
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.dense.weight
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.dense.bias
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.intermediate.dense.weight
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.intermediate.dense.bias
+2019-06-07 02:46:56,094 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.dense.weight
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.dense.bias
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.LayerNorm.weight
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.10.output.LayerNorm.bias
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.query.weight
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.query.bias
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.key.weight
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.key.bias
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.value.weight
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.self.value.bias
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.dense.weight
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.dense.bias
+2019-06-07 02:46:56,095 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.LayerNorm.weight
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.attention.output.LayerNorm.bias
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.intermediate.dense.weight
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.intermediate.dense.bias
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.dense.weight
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.dense.bias
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.LayerNorm.weight
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.encoder.layer.11.output.LayerNorm.bias
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.pooler.dense.weight
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert.bert_model.pooler.dense.bias
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - Following parameters are Tunable (with gradient):
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.gamma
+2019-06-07 02:46:56,096 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.0
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.1
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.2
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.3
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.4
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.5
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.6
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.7
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.8
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.9
+2019-06-07 02:46:56,097 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.10
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _text_field_embedder.token_embedder_bert._scalar_mix.scalar_parameters.11
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _highway_layer._module._layers.0.weight
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _highway_layer._module._layers.0.bias
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _highway_layer._module._layers.1.weight
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _highway_layer._module._layers.1.bias
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _phrase_layer._module.weight_ih_l0
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _phrase_layer._module.weight_hh_l0
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _phrase_layer._module.bias_ih_l0
+2019-06-07 02:46:56,098 - INFO - allennlp.training.trainer - _phrase_layer._module.bias_hh_l0
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _phrase_layer._module.weight_ih_l0_reverse
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _phrase_layer._module.weight_hh_l0_reverse
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _phrase_layer._module.bias_ih_l0_reverse
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _phrase_layer._module.bias_hh_l0_reverse
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _matrix_attention._similarity_function._weight_vector
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _matrix_attention._similarity_function._bias
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_ih_l0
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_hh_l0
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_ih_l0
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_hh_l0
+2019-06-07 02:46:56,099 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_ih_l0_reverse
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_hh_l0_reverse
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_ih_l0_reverse
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_hh_l0_reverse
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_ih_l1
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_hh_l1
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_ih_l1
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_hh_l1
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_ih_l1_reverse
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.weight_hh_l1_reverse
+2019-06-07 02:46:56,100 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_ih_l1_reverse
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _modeling_layer._module.bias_hh_l1_reverse
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.weight_ih_l0
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.weight_hh_l0
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.bias_ih_l0
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.bias_hh_l0
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.weight_ih_l0_reverse
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.weight_hh_l0_reverse
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.bias_ih_l0_reverse
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_end_encoder._module.bias_hh_l0_reverse
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_start_predictor._module.weight
+2019-06-07 02:46:56,101 - INFO - allennlp.training.trainer - _span_start_predictor._module.bias
+2019-06-07 02:46:56,102 - INFO - allennlp.training.trainer - _span_end_predictor._module.weight
+2019-06-07 02:46:56,102 - INFO - allennlp.training.trainer - _span_end_predictor._module.bias
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.patience = 10
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.validation_metric = +em
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.shuffle = True
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.num_epochs = 20
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.cuda_device = 0
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.grad_norm = 5
+2019-06-07 02:46:56,102 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2019-06-07 02:46:56,103 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
+2019-06-07 02:47:00,400 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2019-06-07 02:47:00,400 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2019-06-07 02:47:00,400 - INFO - allennlp.training.optimizers - Number of trainable parameters: 5225784
+2019-06-07 02:47:00,401 - INFO - allennlp.common.params - trainer.optimizer.infer_type_and_cast = True
+2019-06-07 02:47:00,401 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2019-06-07 02:47:00,401 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2019-06-07 02:47:00,401 - INFO - allennlp.common.params - trainer.optimizer.betas = [0.9, 0.9]
+2019-06-07 02:47:00,401 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.type = reduce_on_plateau
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.factor = 0.5
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.mode = max
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.patience = 2
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = 20
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.model_save_interval = None
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.summary_interval = 100
+2019-06-07 02:47:00,402 - INFO - allennlp.common.params - trainer.histogram_interval = None
+2019-06-07 02:47:00,403 - INFO - allennlp.common.params - trainer.should_log_parameter_statistics = True
+2019-06-07 02:47:00,403 - INFO - allennlp.common.params - trainer.should_log_learning_rate = False
+2019-06-07 02:47:00,403 - INFO - allennlp.common.params - trainer.log_batch_size_period = None
+2019-06-07 02:47:00,408 - INFO - allennlp.training.trainer - Beginning training.
+2019-06-07 02:47:00,408 - INFO - allennlp.training.trainer - Epoch 0/19
+2019-06-07 02:47:00,408 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 5510.404
+2019-06-07 02:47:01,295 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 673
+2019-06-07 02:47:01,295 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 10
+2019-06-07 02:47:01,295 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 671
+2019-06-07 02:47:01,295 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 10
+2019-06-07 02:47:01,295 - INFO - allennlp.training.trainer - GPU 4 memory usage MB: 15771
+2019-06-07 02:47:01,295 - INFO - allennlp.training.trainer - GPU 5 memory usage MB: 12283
+2019-06-07 02:47:01,296 - INFO - allennlp.training.trainer - GPU 6 memory usage MB: 0
+2019-06-07 02:47:01,296 - INFO - allennlp.training.trainer - GPU 7 memory usage MB: 1219
+2019-06-07 02:47:01,298 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/2190 [00:00<?, ?it/s]
+start_acc: 0.0000, end_acc: 0.0500, span_acc: 0.0000, em: 0.0000, f1: 0.0585, loss: 9.2774 ||:   0%|          | 1/2190 [01:26<52:24:46, 86.20s/it]
+start_acc: 0.0452, end_acc: 0.0607, span_acc: 0.0155, em: 0.0179, f1: 0.0794, loss: 8.7619 ||:   1%|          | 21/2190 [01:36<36:26:48, 60.49s/it]
+start_acc: 0.0652, end_acc: 0.0762, span_acc: 0.0244, em: 0.0287, f1: 0.0917, loss: 8.0842 ||:   2%|1         | 41/2190 [01:46<25:22:06, 42.50s/it]
+start_acc: 0.0746, end_acc: 0.0766, span_acc: 0.0287, em: 0.0336, f1: 0.0967, loss: 7.8404 ||:   3%|2         | 61/2190 [01:56<17:41:03, 29.90s/it]
+start_acc: 0.0812, end_acc: 0.0830, span_acc: 0.0333, em: 0.0380, f1: 0.0978, loss: 7.6794 ||:   4%|3         | 81/2190 [02:08<12:21:36, 21.10s/it]
+start_acc: 0.0862, end_acc: 0.0882, span_acc: 0.0377, em: 0.0425, f1: 0.1020, loss: 7.5760 ||:   5%|4         | 100/2190 [02:18<8:40:24, 14.94s/it]
+start_acc: 0.0929, end_acc: 0.0956, span_acc: 0.0454, em: 0.0506, f1: 0.1105, loss: 7.4846 ||:   5%|5         | 119/2190 [02:29<6:06:33, 10.62s/it]
+start_acc: 0.0996, end_acc: 0.1058, span_acc: 0.0516, em: 0.0572, f1: 0.1198, loss: 7.3424 ||:   6%|6         | 138/2190 [02:39<4:19:48,  7.60s/it]
+start_acc: 0.1094, end_acc: 0.1145, span_acc: 0.0583, em: 0.0640, f1: 0.1293, loss: 7.2119 ||:   7%|7         | 157/2190 [02:49<3:05:44,  5.48s/it]
+start_acc: 0.1199, end_acc: 0.1246, span_acc: 0.0651, em: 0.0716, f1: 0.1409, loss: 7.0848 ||:   8%|8         | 176/2190 [03:00<2:14:26,  4.00s/it]
+start_acc: 0.1316, end_acc: 0.1335, span_acc: 0.0723, em: 0.0807, f1: 0.1528, loss: 6.9761 ||:   9%|8         | 194/2190 [03:11<1:39:32,  2.99s/it]
+start_acc: 0.1380, end_acc: 0.1415, span_acc: 0.0787, em: 0.0871, f1: 0.1606, loss: 6.8851 ||:  10%|9         | 212/2190 [03:22<1:14:39,  2.26s/it]
+start_acc: 0.1482, end_acc: 0.1537, span_acc: 0.0875, em: 0.0971, f1: 0.1727, loss: 6.7589 ||:  11%|#         | 232/2190 [03:32<56:40,  1.74s/it]  
+start_acc: 0.1607, end_acc: 0.1661, span_acc: 0.0976, em: 0.1078, f1: 0.1855, loss: 6.6187 ||:  12%|#1        | 255/2190 [03:42<43:37,  1.35s/it]
+start_acc: 0.1685, end_acc: 0.1731, span_acc: 0.1034, em: 0.1144, f1: 0.1936, loss: 6.5302 ||:  13%|#2        | 277/2190 [03:55<35:39,  1.12s/it]
+start_acc: 0.1749, end_acc: 0.1806, span_acc: 0.1089, em: 0.1209, f1: 0.2012, loss: 6.4543 ||:  14%|#3        | 296/2190 [04:05<29:56,  1.05it/s]
+start_acc: 0.1816, end_acc: 0.1876, span_acc: 0.1144, em: 0.1273, f1: 0.2096, loss: 6.3828 ||:  14%|#4        | 316/2190 [04:15<25:29,  1.23it/s]
+start_acc: 0.1871, end_acc: 0.1940, span_acc: 0.1176, em: 0.1308, f1: 0.2157, loss: 6.3109 ||:  15%|#5        | 336/2190 [04:26<22:45,  1.36it/s]
+start_acc: 0.1934, end_acc: 0.2004, span_acc: 0.1227, em: 0.1361, f1: 0.2221, loss: 6.2523 ||:  16%|#6        | 355/2190 [04:37<20:55,  1.46it/s]
+start_acc: 0.1997, end_acc: 0.2068, span_acc: 0.1282, em: 0.1420, f1: 0.2290, loss: 6.1928 ||:  17%|#7        | 374/2190 [04:47<19:19,  1.57it/s]
+start_acc: 0.2048, end_acc: 0.2130, span_acc: 0.1331, em: 0.1477, f1: 0.2357, loss: 6.1331 ||:  18%|#7        | 393/2190 [04:58<18:32,  1.62it/s]
+start_acc: 0.2098, end_acc: 0.2181, span_acc: 0.1367, em: 0.1526, f1: 0.2422, loss: 6.0802 ||:  19%|#8        | 411/2190 [05:08<17:48,  1.66it/s]
+start_acc: 0.2144, end_acc: 0.2222, span_acc: 0.1401, em: 0.1563, f1: 0.2472, loss: 6.0299 ||:  20%|#9        | 430/2190 [05:18<17:03,  1.72it/s]
+start_acc: 0.2198, end_acc: 0.2275, span_acc: 0.1442, em: 0.1613, f1: 0.2535, loss: 5.9581 ||:  21%|##        | 452/2190 [05:28<15:46,  1.84it/s]
+start_acc: 0.2244, end_acc: 0.2329, span_acc: 0.1482, em: 0.1661, f1: 0.2599, loss: 5.8997 ||:  22%|##1       | 474/2190 [05:40<15:23,  1.86it/s]
+start_acc: 0.2284, end_acc: 0.2370, span_acc: 0.1515, em: 0.1697, f1: 0.2648, loss: 5.8493 ||:  23%|##2       | 494/2190 [05:51<15:12,  1.86it/s]
+start_acc: 0.2323, end_acc: 0.2416, span_acc: 0.1548, em: 0.1735, f1: 0.2696, loss: 5.8067 ||:  23%|##3       | 513/2190 [06:01<15:19,  1.82it/s]
+start_acc: 0.2382, end_acc: 0.2484, span_acc: 0.1594, em: 0.1788, f1: 0.2766, loss: 5.7451 ||:  24%|##4       | 535/2190 [06:12<14:27,  1.91it/s]
+start_acc: 0.2430, end_acc: 0.2525, span_acc: 0.1633, em: 0.1830, f1: 0.2817, loss: 5.6983 ||:  25%|##5       | 557/2190 [06:25<14:43,  1.85it/s]
+start_acc: 0.2470, end_acc: 0.2571, span_acc: 0.1666, em: 0.1865, f1: 0.2867, loss: 5.6557 ||:  26%|##6       | 577/2190 [06:35<14:20,  1.87it/s]
+start_acc: 0.2515, end_acc: 0.2628, span_acc: 0.1711, em: 0.1916, f1: 0.2927, loss: 5.6111 ||:  27%|##7       | 597/2190 [06:46<14:26,  1.84it/s]
+start_acc: 0.2549, end_acc: 0.2670, span_acc: 0.1742, em: 0.1953, f1: 0.2970, loss: 5.5792 ||:  28%|##8       | 616/2190 [06:56<14:09,  1.85it/s]
+start_acc: 0.2597, end_acc: 0.2713, span_acc: 0.1780, em: 0.1994, f1: 0.3020, loss: 5.5410 ||:  29%|##8       | 635/2190 [07:07<13:59,  1.85it/s]
+start_acc: 0.2636, end_acc: 0.2749, span_acc: 0.1811, em: 0.2031, f1: 0.3066, loss: 5.5052 ||:  30%|##9       | 655/2190 [07:17<13:31,  1.89it/s]
+start_acc: 0.2678, end_acc: 0.2794, span_acc: 0.1852, em: 0.2074, f1: 0.3113, loss: 5.4716 ||:  31%|###       | 675/2190 [07:28<13:43,  1.84it/s]
+start_acc: 0.2710, end_acc: 0.2832, span_acc: 0.1882, em: 0.2108, f1: 0.3157, loss: 5.4367 ||:  32%|###1      | 695/2190 [07:38<13:18,  1.87it/s]
+start_acc: 0.2745, end_acc: 0.2877, span_acc: 0.1916, em: 0.2145, f1: 0.3202, loss: 5.4028 ||:  33%|###2      | 715/2190 [07:49<13:06,  1.87it/s]
+start_acc: 0.2782, end_acc: 0.2918, span_acc: 0.1951, em: 0.2180, f1: 0.3251, loss: 5.3695 ||:  34%|###3      | 735/2190 [07:59<12:42,  1.91it/s]
+start_acc: 0.2813, end_acc: 0.2964, span_acc: 0.1983, em: 0.2220, f1: 0.3297, loss: 5.3323 ||:  35%|###4      | 756/2190 [08:09<12:15,  1.95it/s]
+start_acc: 0.2849, end_acc: 0.3003, span_acc: 0.2015, em: 0.2256, f1: 0.3340, loss: 5.2991 ||:  35%|###5      | 777/2190 [08:21<12:23,  1.90it/s]
+start_acc: 0.2891, end_acc: 0.3057, span_acc: 0.2057, em: 0.2301, f1: 0.3394, loss: 5.2533 ||:  36%|###6      | 799/2190 [08:31<11:44,  1.97it/s]
+start_acc: 0.2921, end_acc: 0.3095, span_acc: 0.2088, em: 0.2334, f1: 0.3433, loss: 5.2246 ||:  37%|###7      | 821/2190 [08:47<13:07,  1.74it/s]
+start_acc: 0.2957, end_acc: 0.3137, span_acc: 0.2123, em: 0.2371, f1: 0.3478, loss: 5.1923 ||:  38%|###8      | 841/2190 [08:58<12:33,  1.79it/s]
+start_acc: 0.2996, end_acc: 0.3179, span_acc: 0.2157, em: 0.2413, f1: 0.3526, loss: 5.1570 ||:  39%|###9      | 861/2190 [09:09<12:14,  1.81it/s]
+start_acc: 0.3029, end_acc: 0.3221, span_acc: 0.2190, em: 0.2449, f1: 0.3567, loss: 5.1261 ||:  40%|####      | 880/2190 [09:19<12:03,  1.81it/s]
+start_acc: 0.3065, end_acc: 0.3262, span_acc: 0.2223, em: 0.2484, f1: 0.3610, loss: 5.0951 ||:  41%|####1     | 900/2190 [09:30<11:49,  1.82it/s]
+start_acc: 0.3106, end_acc: 0.3296, span_acc: 0.2257, em: 0.2521, f1: 0.3653, loss: 5.0608 ||:  42%|####1     | 919/2190 [09:41<11:47,  1.80it/s]
+start_acc: 0.3147, end_acc: 0.3344, span_acc: 0.2298, em: 0.2568, f1: 0.3706, loss: 5.0257 ||:  43%|####2     | 940/2190 [09:51<11:08,  1.87it/s]
+start_acc: 0.3179, end_acc: 0.3383, span_acc: 0.2330, em: 0.2605, f1: 0.3747, loss: 4.9942 ||:  44%|####3     | 961/2190 [10:02<10:49,  1.89it/s]
+start_acc: 0.3211, end_acc: 0.3422, span_acc: 0.2360, em: 0.2642, f1: 0.3786, loss: 4.9664 ||:  45%|####4     | 981/2190 [10:14<11:06,  1.81it/s]
+start_acc: 0.3246, end_acc: 0.3456, span_acc: 0.2392, em: 0.2680, f1: 0.3827, loss: 4.9395 ||:  46%|####5     | 1000/2190 [10:24<10:48,  1.84it/s]
+start_acc: 0.3278, end_acc: 0.3492, span_acc: 0.2418, em: 0.2711, f1: 0.3865, loss: 4.9107 ||:  47%|####6     | 1019/2190 [10:34<10:32,  1.85it/s]
+start_acc: 0.3308, end_acc: 0.3527, span_acc: 0.2445, em: 0.2741, f1: 0.3905, loss: 4.8841 ||:  47%|####7     | 1040/2190 [10:44<10:04,  1.90it/s]
+start_acc: 0.3343, end_acc: 0.3569, span_acc: 0.2478, em: 0.2779, f1: 0.3948, loss: 4.8511 ||:  48%|####8     | 1061/2190 [10:56<09:59,  1.88it/s]
+start_acc: 0.3369, end_acc: 0.3598, span_acc: 0.2500, em: 0.2806, f1: 0.3980, loss: 4.8275 ||:  49%|####9     | 1080/2190 [11:06<09:58,  1.85it/s]
+start_acc: 0.3401, end_acc: 0.3631, span_acc: 0.2530, em: 0.2839, f1: 0.4017, loss: 4.7991 ||:  50%|#####     | 1100/2190 [11:17<09:39,  1.88it/s]
+start_acc: 0.3432, end_acc: 0.3665, span_acc: 0.2556, em: 0.2867, f1: 0.4055, loss: 4.7729 ||:  51%|#####1    | 1120/2190 [11:29<09:54,  1.80it/s]
+start_acc: 0.3455, end_acc: 0.3697, span_acc: 0.2581, em: 0.2895, f1: 0.4087, loss: 4.7506 ||:  52%|#####1    | 1138/2190 [11:39<09:56,  1.76it/s]
+start_acc: 0.3488, end_acc: 0.3732, span_acc: 0.2611, em: 0.2928, f1: 0.4125, loss: 4.7230 ||:  53%|#####2    | 1157/2190 [11:50<09:36,  1.79it/s]
+start_acc: 0.3515, end_acc: 0.3763, span_acc: 0.2634, em: 0.2957, f1: 0.4159, loss: 4.6990 ||:  54%|#####3    | 1176/2190 [12:00<09:18,  1.81it/s]
+start_acc: 0.3547, end_acc: 0.3795, span_acc: 0.2662, em: 0.2988, f1: 0.4198, loss: 4.6718 ||:  55%|#####4    | 1195/2190 [12:10<09:04,  1.83it/s]
+start_acc: 0.3578, end_acc: 0.3835, span_acc: 0.2695, em: 0.3024, f1: 0.4239, loss: 4.6422 ||:  56%|#####5    | 1217/2190 [12:21<08:32,  1.90it/s]
+start_acc: 0.3606, end_acc: 0.3869, span_acc: 0.2722, em: 0.3055, f1: 0.4276, loss: 4.6155 ||:  57%|#####6    | 1238/2190 [12:31<08:09,  1.94it/s]
+start_acc: 0.3635, end_acc: 0.3902, span_acc: 0.2750, em: 0.3085, f1: 0.4310, loss: 4.5917 ||:  57%|#####7    | 1259/2190 [12:42<08:02,  1.93it/s]
+start_acc: 0.3661, end_acc: 0.3931, span_acc: 0.2776, em: 0.3116, f1: 0.4343, loss: 4.5681 ||:  58%|#####8    | 1281/2190 [12:52<07:35,  2.00it/s]
+start_acc: 0.3688, end_acc: 0.3964, span_acc: 0.2803, em: 0.3147, f1: 0.4376, loss: 4.5435 ||:  59%|#####9    | 1303/2190 [13:03<07:24,  2.00it/s]
+start_acc: 0.3712, end_acc: 0.3992, span_acc: 0.2827, em: 0.3174, f1: 0.4405, loss: 4.5234 ||:  60%|######    | 1323/2190 [13:16<07:55,  1.82it/s]
+start_acc: 0.3737, end_acc: 0.4024, span_acc: 0.2854, em: 0.3204, f1: 0.4439, loss: 4.5025 ||:  61%|######1   | 1343/2190 [13:26<07:35,  1.86it/s]
+start_acc: 0.3760, end_acc: 0.4052, span_acc: 0.2875, em: 0.3230, f1: 0.4467, loss: 4.4818 ||:  62%|######2   | 1363/2190 [13:38<07:33,  1.82it/s]
+start_acc: 0.3780, end_acc: 0.4079, span_acc: 0.2894, em: 0.3253, f1: 0.4495, loss: 4.4635 ||:  63%|######3   | 1382/2190 [13:49<07:25,  1.81it/s]
+start_acc: 0.3803, end_acc: 0.4104, span_acc: 0.2916, em: 0.3278, f1: 0.4522, loss: 4.4431 ||:  64%|######3   | 1400/2190 [13:59<07:19,  1.80it/s]
+start_acc: 0.3824, end_acc: 0.4127, span_acc: 0.2935, em: 0.3300, f1: 0.4547, loss: 4.4263 ||:  65%|######4   | 1419/2190 [14:09<07:05,  1.81it/s]
+start_acc: 0.3847, end_acc: 0.4154, span_acc: 0.2956, em: 0.3323, f1: 0.4573, loss: 4.4070 ||:  66%|######5   | 1438/2190 [14:20<06:56,  1.81it/s]
+start_acc: 0.3861, end_acc: 0.4173, span_acc: 0.2969, em: 0.3341, f1: 0.4595, loss: 4.3928 ||:  66%|######6   | 1456/2190 [14:30<06:49,  1.79it/s]
+start_acc: 0.3877, end_acc: 0.4193, span_acc: 0.2984, em: 0.3360, f1: 0.4618, loss: 4.3780 ||:  67%|######7   | 1474/2190 [14:40<06:42,  1.78it/s]
+start_acc: 0.3902, end_acc: 0.4222, span_acc: 0.3007, em: 0.3389, f1: 0.4649, loss: 4.3549 ||:  68%|######8   | 1496/2190 [14:50<06:07,  1.89it/s]
+start_acc: 0.3922, end_acc: 0.4251, span_acc: 0.3028, em: 0.3412, f1: 0.4677, loss: 4.3359 ||:  69%|######9   | 1518/2190 [15:03<06:03,  1.85it/s]
+start_acc: 0.3946, end_acc: 0.4278, span_acc: 0.3053, em: 0.3437, f1: 0.4704, loss: 4.3163 ||:  70%|#######   | 1538/2190 [15:13<05:48,  1.87it/s]
+start_acc: 0.3968, end_acc: 0.4301, span_acc: 0.3073, em: 0.3460, f1: 0.4731, loss: 4.2991 ||:  71%|#######1  | 1558/2190 [15:24<05:43,  1.84it/s]
+start_acc: 0.3993, end_acc: 0.4327, span_acc: 0.3096, em: 0.3484, f1: 0.4758, loss: 4.2802 ||:  72%|#######2  | 1577/2190 [15:35<05:33,  1.84it/s]
+start_acc: 0.4013, end_acc: 0.4345, span_acc: 0.3113, em: 0.3502, f1: 0.4779, loss: 4.2649 ||:  73%|#######2  | 1596/2190 [15:45<05:20,  1.85it/s]
+start_acc: 0.4031, end_acc: 0.4371, span_acc: 0.3135, em: 0.3525, f1: 0.4804, loss: 4.2483 ||:  74%|#######3  | 1615/2190 [15:56<05:18,  1.80it/s]
+start_acc: 0.4051, end_acc: 0.4392, span_acc: 0.3153, em: 0.3545, f1: 0.4825, loss: 4.2341 ||:  75%|#######4  | 1634/2190 [16:06<05:04,  1.82it/s]
+start_acc: 0.4069, end_acc: 0.4417, span_acc: 0.3171, em: 0.3565, f1: 0.4850, loss: 4.2174 ||:  76%|#######5  | 1655/2190 [16:16<04:44,  1.88it/s]
+start_acc: 0.4091, end_acc: 0.4439, span_acc: 0.3191, em: 0.3587, f1: 0.4874, loss: 4.1994 ||:  77%|#######6  | 1676/2190 [16:27<04:27,  1.92it/s]
+start_acc: 0.4113, end_acc: 0.4459, span_acc: 0.3211, em: 0.3607, f1: 0.4896, loss: 4.1836 ||:  77%|#######7  | 1697/2190 [16:38<04:17,  1.91it/s]
+start_acc: 0.4133, end_acc: 0.4479, span_acc: 0.3230, em: 0.3627, f1: 0.4917, loss: 4.1686 ||:  78%|#######8  | 1716/2190 [16:48<04:12,  1.88it/s]
+start_acc: 0.4155, end_acc: 0.4500, span_acc: 0.3252, em: 0.3649, f1: 0.4940, loss: 4.1513 ||:  79%|#######9  | 1738/2190 [16:59<03:51,  1.95it/s]
+start_acc: 0.4170, end_acc: 0.4519, span_acc: 0.3266, em: 0.3666, f1: 0.4962, loss: 4.1361 ||:  80%|########  | 1760/2190 [17:10<03:41,  1.94it/s]
+start_acc: 0.4185, end_acc: 0.4535, span_acc: 0.3280, em: 0.3682, f1: 0.4980, loss: 4.1245 ||:  81%|########1 | 1780/2190 [17:22<03:39,  1.87it/s]
+start_acc: 0.4203, end_acc: 0.4555, span_acc: 0.3295, em: 0.3701, f1: 0.5000, loss: 4.1099 ||:  82%|########2 | 1800/2190 [17:32<03:28,  1.87it/s]
+start_acc: 0.4220, end_acc: 0.4569, span_acc: 0.3311, em: 0.3718, f1: 0.5018, loss: 4.0965 ||:  83%|########3 | 1820/2190 [17:43<03:14,  1.91it/s]
+start_acc: 0.4243, end_acc: 0.4592, span_acc: 0.3331, em: 0.3740, f1: 0.5041, loss: 4.0782 ||:  84%|########4 | 1841/2190 [17:53<03:02,  1.91it/s]
+start_acc: 0.4261, end_acc: 0.4609, span_acc: 0.3347, em: 0.3756, f1: 0.5061, loss: 4.0638 ||:  85%|########5 | 1862/2190 [18:04<02:48,  1.95it/s]
+start_acc: 0.4278, end_acc: 0.4623, span_acc: 0.3361, em: 0.3773, f1: 0.5081, loss: 4.0491 ||:  86%|########5 | 1883/2190 [18:14<02:34,  1.99it/s]
+start_acc: 0.4295, end_acc: 0.4640, span_acc: 0.3376, em: 0.3790, f1: 0.5099, loss: 4.0366 ||:  87%|########6 | 1904/2190 [18:25<02:26,  1.96it/s]
+start_acc: 0.4308, end_acc: 0.4655, span_acc: 0.3390, em: 0.3805, f1: 0.5115, loss: 4.0275 ||:  88%|########7 | 1923/2190 [18:37<02:27,  1.81it/s]
+start_acc: 0.4322, end_acc: 0.4670, span_acc: 0.3403, em: 0.3820, f1: 0.5132, loss: 4.0171 ||:  89%|########8 | 1942/2190 [18:48<02:16,  1.81it/s]
+start_acc: 0.4336, end_acc: 0.4685, span_acc: 0.3415, em: 0.3836, f1: 0.5150, loss: 4.0041 ||:  90%|########9 | 1963/2190 [18:58<02:01,  1.87it/s]
+start_acc: 0.4353, end_acc: 0.4702, span_acc: 0.3431, em: 0.3854, f1: 0.5170, loss: 3.9910 ||:  91%|######### | 1984/2190 [19:09<01:50,  1.87it/s]
+start_acc: 0.4368, end_acc: 0.4719, span_acc: 0.3447, em: 0.3871, f1: 0.5187, loss: 3.9785 ||:  92%|#########1| 2004/2190 [19:20<01:38,  1.89it/s]
+start_acc: 0.4387, end_acc: 0.4740, span_acc: 0.3465, em: 0.3892, f1: 0.5208, loss: 3.9636 ||:  92%|#########2| 2025/2190 [19:30<01:25,  1.93it/s]
+start_acc: 0.4402, end_acc: 0.4756, span_acc: 0.3479, em: 0.3907, f1: 0.5226, loss: 3.9490 ||:  93%|#########3| 2047/2190 [19:40<01:11,  1.99it/s]
+start_acc: 0.4414, end_acc: 0.4770, span_acc: 0.3490, em: 0.3920, f1: 0.5241, loss: 3.9384 ||:  94%|#########4| 2069/2190 [19:51<01:00,  2.01it/s]
+start_acc: 0.4427, end_acc: 0.4784, span_acc: 0.3503, em: 0.3933, f1: 0.5255, loss: 3.9279 ||:  95%|#########5| 2090/2190 [20:01<00:49,  2.01it/s]
+start_acc: 0.4443, end_acc: 0.4801, span_acc: 0.3518, em: 0.3951, f1: 0.5273, loss: 3.9152 ||:  96%|#########6| 2111/2190 [20:12<00:40,  1.97it/s]
+start_acc: 0.4460, end_acc: 0.4816, span_acc: 0.3534, em: 0.3967, f1: 0.5290, loss: 3.9041 ||:  97%|#########7| 2131/2190 [20:23<00:29,  1.98it/s]
+start_acc: 0.4472, end_acc: 0.4831, span_acc: 0.3545, em: 0.3980, f1: 0.5304, loss: 3.8936 ||:  98%|#########8| 2151/2190 [20:34<00:20,  1.88it/s]
+start_acc: 0.4487, end_acc: 0.4847, span_acc: 0.3559, em: 0.3997, f1: 0.5322, loss: 3.8810 ||:  99%|#########9| 2173/2190 [20:45<00:08,  1.95it/s]
+start_acc: 0.4499, end_acc: 0.4861, span_acc: 0.3571, em: 0.4010, f1: 0.5336, loss: 3.8709 ||: 100%|##########| 2190/2190 [20:54<00:00,  1.75it/s]
+
+2019-06-07 03:07:56,253 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/265 [00:00<?, ?it/s]
+start_acc: 0.6000, end_acc: 0.5500, span_acc: 0.4250, em: 0.6000, f1: 0.7253, loss: 3.1422 ||:   0%|          | 1/265 [00:14<1:03:36, 14.46s/it]
+start_acc: 0.6568, end_acc: 0.6864, span_acc: 0.5693, em: 0.6994, f1: 0.7930, loss: 2.1597 ||:  17%|#6        | 44/265 [00:24<37:32, 10.19s/it] 
+start_acc: 0.6603, end_acc: 0.6891, span_acc: 0.5670, em: 0.7063, f1: 0.7996, loss: 2.1538 ||:  33%|###2      | 87/265 [00:37<21:26,  7.23s/it]
+start_acc: 0.6577, end_acc: 0.6908, span_acc: 0.5660, em: 0.7037, f1: 0.7988, loss: 2.1636 ||:  45%|####5     | 120/265 [00:49<12:28,  5.16s/it]
+start_acc: 0.6577, end_acc: 0.6945, span_acc: 0.5690, em: 0.7064, f1: 0.7990, loss: 2.1605 ||:  56%|#####6    | 149/265 [01:00<07:12,  3.73s/it]
+start_acc: 0.6557, end_acc: 0.6974, span_acc: 0.5678, em: 0.7084, f1: 0.8010, loss: 2.1597 ||:  66%|######6   | 176/265 [01:11<04:02,  2.73s/it]
+start_acc: 0.6562, end_acc: 0.6981, span_acc: 0.5687, em: 0.7090, f1: 0.8009, loss: 2.1546 ||:  76%|#######5  | 201/265 [01:22<02:10,  2.04s/it]
+start_acc: 0.6576, end_acc: 0.6969, span_acc: 0.5699, em: 0.7079, f1: 0.7999, loss: 2.1661 ||:  85%|########4 | 224/265 [01:33<01:04,  1.58s/it]
+start_acc: 0.6578, end_acc: 0.6962, span_acc: 0.5694, em: 0.7072, f1: 0.7980, loss: 2.1846 ||:  92%|#########2| 245/265 [01:45<00:25,  1.28s/it]
+start_acc: 0.6565, end_acc: 0.6960, span_acc: 0.5690, em: 0.7070, f1: 0.7976, loss: 2.2094 ||:  99%|#########9| 263/265 [01:59<00:02,  1.12s/it]
+start_acc: 0.6562, end_acc: 0.6958, span_acc: 0.5688, em: 0.7069, f1: 0.7976, loss: 2.2272 ||: 100%|##########| 265/265 [02:01<00:00,  2.17it/s]
+
+2019-06-07 03:09:58,117 - INFO - allennlp.training.tensorboard_writer -                     Training |  Validation
+2019-06-07 03:09:58,117 - INFO - allennlp.training.tensorboard_writer - f1              |     0.534  |     0.798
+2019-06-07 03:09:58,118 - INFO - allennlp.training.tensorboard_writer - gpu_4_memory_MB |  15771.000  |       N/A
+2019-06-07 03:09:58,118 - INFO - allennlp.training.tensorboard_writer - start_acc       |     0.450  |     0.656
+2019-06-07 03:09:58,119 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB |   673.000  |       N/A
+2019-06-07 03:09:58,119 - INFO - allennlp.training.tensorboard_writer - end_acc         |     0.486  |     0.696
+2019-06-07 03:09:58,119 - INFO - allennlp.training.tensorboard_writer - loss            |     3.871  |     2.227
+2019-06-07 03:09:58,120 - INFO - allennlp.training.tensorboard_writer - gpu_2_memory_MB |   671.000  |       N/A
+2019-06-07 03:09:58,120 - INFO - allennlp.training.tensorboard_writer - gpu_7_memory_MB |  1219.000  |       N/A
+2019-06-07 03:09:58,120 - INFO - allennlp.training.tensorboard_writer - gpu_3_memory_MB |    10.000  |       N/A
+2019-06-07 03:09:58,121 - INFO - allennlp.training.tensorboard_writer - gpu_5_memory_MB |  12283.000  |       N/A
+2019-06-07 03:09:58,121 - INFO - allennlp.training.tensorboard_writer - em              |     0.401  |     0.707
+2019-06-07 03:09:58,121 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB   |  5510.404  |       N/A
+2019-06-07 03:09:58,122 - INFO - allennlp.training.tensorboard_writer - gpu_1_memory_MB |    10.000  |       N/A
+2019-06-07 03:09:58,122 - INFO - allennlp.training.tensorboard_writer - gpu_6_memory_MB |     0.000  |       N/A
+2019-06-07 03:09:58,122 - INFO - allennlp.training.tensorboard_writer - span_acc        |     0.357  |     0.569
+2019-06-07 03:09:58,896 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'model_v4.2/best.th'.
+2019-06-07 03:09:59,343 - INFO - allennlp.training.trainer - Epoch duration: 0:22:58.935153
+2019-06-07 03:09:59,345 - INFO - allennlp.training.trainer - Estimated training time remaining: 7:16:39
+2019-06-07 03:09:59,345 - INFO - allennlp.training.trainer - Epoch 1/19
+2019-06-07 03:09:59,345 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 5893.516
+2019-06-07 03:10:01,155 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 673
+2019-06-07 03:10:01,155 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 0
+2019-06-07 03:10:01,155 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 671
+2019-06-07 03:10:01,156 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 10
+2019-06-07 03:10:01,156 - INFO - allennlp.training.trainer - GPU 4 memory usage MB: 15771
+2019-06-07 03:10:01,156 - INFO - allennlp.training.trainer - GPU 5 memory usage MB: 12283
+2019-06-07 03:10:01,156 - INFO - allennlp.training.trainer - GPU 6 memory usage MB: 0
+2019-06-07 03:10:01,156 - INFO - allennlp.training.trainer - GPU 7 memory usage MB: 12425
+2019-06-07 03:10:01,159 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/2190 [00:00<?, ?it/s]
+start_acc: 0.5250, end_acc: 0.7000, span_acc: 0.4500, em: 0.5250, f1: 0.6805, loss: 2.7004 ||:   0%|          | 1/2190 [00:17<10:36:35, 17.45s/it]
+start_acc: 0.6011, end_acc: 0.6739, span_acc: 0.5102, em: 0.5795, f1: 0.7084, loss: 2.6022 ||:   1%|1         | 22/2190 [00:28<7:27:01, 12.37s/it]
+start_acc: 0.5970, end_acc: 0.6679, span_acc: 0.5095, em: 0.5690, f1: 0.7057, loss: 2.6024 ||:   2%|1         | 42/2190 [00:39<5:15:48,  8.82s/it]
+start_acc: 0.5967, end_acc: 0.6631, span_acc: 0.5086, em: 0.5672, f1: 0.7081, loss: 2.6294 ||:   3%|2         | 61/2190 [00:50<3:45:10,  6.35s/it]
+start_acc: 0.5982, end_acc: 0.6705, span_acc: 0.5093, em: 0.5696, f1: 0.7141, loss: 2.5681 ||:   4%|3         | 83/2190 [01:00<2:40:58,  4.58s/it]
+start_acc: 0.5983, end_acc: 0.6645, span_acc: 0.5062, em: 0.5664, f1: 0.7126, loss: 2.5787 ||:   5%|4         | 105/2190 [01:11<1:56:31,  3.35s/it]
+start_acc: 0.5994, end_acc: 0.6637, span_acc: 0.5069, em: 0.5690, f1: 0.7144, loss: 2.5769 ||:   6%|5         | 126/2190 [01:21<1:25:46,  2.49s/it]
+start_acc: 0.5998, end_acc: 0.6607, span_acc: 0.5048, em: 0.5663, f1: 0.7119, loss: 2.5821 ||:   7%|6         | 147/2190 [01:31<1:04:31,  1.90s/it]
+start_acc: 0.6057, end_acc: 0.6594, span_acc: 0.5070, em: 0.5685, f1: 0.7150, loss: 2.5629 ||:   8%|7         | 168/2190 [01:41<49:35,  1.47s/it]  
+start_acc: 0.6066, end_acc: 0.6602, span_acc: 0.5082, em: 0.5687, f1: 0.7144, loss: 2.5568 ||:   9%|8         | 189/2190 [01:53<39:40,  1.19s/it]
+start_acc: 0.6111, end_acc: 0.6603, span_acc: 0.5109, em: 0.5712, f1: 0.7161, loss: 2.5453 ||:   9%|9         | 208/2190 [02:03<33:03,  1.00s/it]
+start_acc: 0.6126, end_acc: 0.6643, span_acc: 0.5145, em: 0.5747, f1: 0.7176, loss: 2.5287 ||:  10%|#         | 229/2190 [02:13<27:39,  1.18it/s]
+start_acc: 0.6118, end_acc: 0.6620, span_acc: 0.5124, em: 0.5729, f1: 0.7168, loss: 2.5299 ||:  11%|#1        | 251/2190 [02:24<23:41,  1.36it/s]
+start_acc: 0.6115, end_acc: 0.6606, span_acc: 0.5131, em: 0.5730, f1: 0.7159, loss: 2.5426 ||:  12%|#2        | 273/2190 [02:38<22:47,  1.40it/s]
+start_acc: 0.6123, end_acc: 0.6631, span_acc: 0.5149, em: 0.5741, f1: 0.7168, loss: 2.5302 ||:  13%|#3        | 293/2190 [02:49<20:35,  1.54it/s]
+start_acc: 0.6142, end_acc: 0.6645, span_acc: 0.5169, em: 0.5757, f1: 0.7179, loss: 2.5220 ||:  14%|#4        | 313/2190 [02:59<19:05,  1.64it/s]
+start_acc: 0.6140, end_acc: 0.6631, span_acc: 0.5167, em: 0.5752, f1: 0.7171, loss: 2.5269 ||:  15%|#5        | 333/2190 [03:10<18:14,  1.70it/s]
+start_acc: 0.6138, end_acc: 0.6643, span_acc: 0.5169, em: 0.5747, f1: 0.7175, loss: 2.5172 ||:  16%|#6        | 354/2190 [03:20<17:12,  1.78it/s]
+start_acc: 0.6153, end_acc: 0.6653, span_acc: 0.5181, em: 0.5756, f1: 0.7191, loss: 2.5164 ||:  17%|#7        | 375/2190 [03:32<17:14,  1.75it/s]
+start_acc: 0.6146, end_acc: 0.6639, span_acc: 0.5168, em: 0.5749, f1: 0.7182, loss: 2.5282 ||:  18%|#7        | 393/2190 [03:46<18:27,  1.62it/s]
+start_acc: 0.6146, end_acc: 0.6647, span_acc: 0.5174, em: 0.5752, f1: 0.7194, loss: 2.5196 ||:  19%|#8        | 413/2190 [03:56<17:32,  1.69it/s]
+start_acc: 0.6151, end_acc: 0.6644, span_acc: 0.5177, em: 0.5756, f1: 0.7201, loss: 2.5134 ||:  20%|#9        | 432/2190 [04:07<16:59,  1.72it/s]
+start_acc: 0.6135, end_acc: 0.6634, span_acc: 0.5167, em: 0.5755, f1: 0.7194, loss: 2.5213 ||:  21%|##        | 451/2190 [04:19<17:15,  1.68it/s]
+start_acc: 0.6130, end_acc: 0.6637, span_acc: 0.5165, em: 0.5751, f1: 0.7193, loss: 2.5217 ||:  21%|##1       | 470/2190 [04:29<16:38,  1.72it/s]
+start_acc: 0.6130, end_acc: 0.6640, span_acc: 0.5170, em: 0.5754, f1: 0.7195, loss: 2.5203 ||:  22%|##2       | 489/2190 [04:39<16:10,  1.75it/s]
+start_acc: 0.6132, end_acc: 0.6639, span_acc: 0.5173, em: 0.5757, f1: 0.7195, loss: 2.5198 ||:  23%|##3       | 508/2190 [04:50<15:59,  1.75it/s]
+start_acc: 0.6135, end_acc: 0.6630, span_acc: 0.5172, em: 0.5755, f1: 0.7192, loss: 2.5223 ||:  24%|##4       | 527/2190 [05:00<15:29,  1.79it/s]
+start_acc: 0.6132, end_acc: 0.6635, span_acc: 0.5172, em: 0.5757, f1: 0.7197, loss: 2.5202 ||:  25%|##4       | 547/2190 [05:11<14:57,  1.83it/s]
+start_acc: 0.6132, end_acc: 0.6628, span_acc: 0.5170, em: 0.5754, f1: 0.7196, loss: 2.5230 ||:  26%|##5       | 567/2190 [05:23<15:07,  1.79it/s]
+start_acc: 0.6134, end_acc: 0.6626, span_acc: 0.5167, em: 0.5755, f1: 0.7197, loss: 2.5227 ||:  27%|##6       | 586/2190 [05:33<14:50,  1.80it/s]
+start_acc: 0.6133, end_acc: 0.6618, span_acc: 0.5155, em: 0.5744, f1: 0.7192, loss: 2.5250 ||:  28%|##7       | 606/2190 [05:44<14:27,  1.83it/s]
+start_acc: 0.6133, end_acc: 0.6623, span_acc: 0.5157, em: 0.5743, f1: 0.7194, loss: 2.5243 ||:  29%|##8       | 625/2190 [05:54<14:10,  1.84it/s]
+start_acc: 0.6135, end_acc: 0.6627, span_acc: 0.5165, em: 0.5748, f1: 0.7196, loss: 2.5225 ||:  29%|##9       | 645/2190 [06:04<13:43,  1.88it/s]
+start_acc: 0.6145, end_acc: 0.6636, span_acc: 0.5179, em: 0.5763, f1: 0.7205, loss: 2.5174 ||:  30%|###       | 665/2190 [06:14<13:25,  1.89it/s]
+start_acc: 0.6143, end_acc: 0.6636, span_acc: 0.5176, em: 0.5759, f1: 0.7205, loss: 2.5156 ||:  31%|###1      | 685/2190 [06:25<13:25,  1.87it/s]
+start_acc: 0.6148, end_acc: 0.6636, span_acc: 0.5178, em: 0.5760, f1: 0.7205, loss: 2.5156 ||:  32%|###2      | 704/2190 [06:35<13:15,  1.87it/s]
+start_acc: 0.6145, end_acc: 0.6635, span_acc: 0.5177, em: 0.5761, f1: 0.7205, loss: 2.5146 ||:  33%|###3      | 723/2190 [06:46<13:14,  1.85it/s]
+start_acc: 0.6150, end_acc: 0.6637, span_acc: 0.5185, em: 0.5767, f1: 0.7208, loss: 2.5093 ||:  34%|###3      | 744/2190 [06:56<12:38,  1.91it/s]
+start_acc: 0.6163, end_acc: 0.6639, span_acc: 0.5194, em: 0.5774, f1: 0.7216, loss: 2.5042 ||:  35%|###4      | 765/2190 [07:06<12:07,  1.96it/s]
+start_acc: 0.6168, end_acc: 0.6643, span_acc: 0.5196, em: 0.5780, f1: 0.7221, loss: 2.4994 ||:  36%|###5      | 786/2190 [07:17<12:03,  1.94it/s]
+start_acc: 0.6175, end_acc: 0.6649, span_acc: 0.5206, em: 0.5791, f1: 0.7228, loss: 2.4967 ||:  37%|###6      | 808/2190 [07:27<11:28,  2.01it/s]
+start_acc: 0.6168, end_acc: 0.6649, span_acc: 0.5204, em: 0.5784, f1: 0.7222, loss: 2.4997 ||:  38%|###7      | 831/2190 [07:38<10:57,  2.07it/s]
+start_acc: 0.6161, end_acc: 0.6646, span_acc: 0.5195, em: 0.5778, f1: 0.7220, loss: 2.5027 ||:  39%|###8      | 854/2190 [07:49<10:58,  2.03it/s]
+start_acc: 0.6162, end_acc: 0.6645, span_acc: 0.5195, em: 0.5778, f1: 0.7217, loss: 2.5022 ||:  40%|###9      | 875/2190 [08:00<10:48,  2.03it/s]
+start_acc: 0.6163, end_acc: 0.6642, span_acc: 0.5195, em: 0.5776, f1: 0.7216, loss: 2.5042 ||:  41%|####      | 896/2190 [08:13<11:37,  1.85it/s]
+start_acc: 0.6161, end_acc: 0.6647, span_acc: 0.5197, em: 0.5778, f1: 0.7218, loss: 2.5026 ||:  42%|####1     | 914/2190 [08:24<11:39,  1.82it/s]
+start_acc: 0.6164, end_acc: 0.6646, span_acc: 0.5198, em: 0.5779, f1: 0.7219, loss: 2.5034 ||:  43%|####2     | 932/2190 [08:35<12:01,  1.74it/s]
+start_acc: 0.6164, end_acc: 0.6649, span_acc: 0.5200, em: 0.5784, f1: 0.7223, loss: 2.4999 ||:  43%|####3     | 951/2190 [08:45<11:33,  1.79it/s]
+start_acc: 0.6166, end_acc: 0.6653, span_acc: 0.5205, em: 0.5789, f1: 0.7228, loss: 2.4964 ||:  44%|####4     | 971/2190 [08:56<11:08,  1.82it/s]
+start_acc: 0.6167, end_acc: 0.6652, span_acc: 0.5205, em: 0.5787, f1: 0.7227, loss: 2.4950 ||:  45%|####5     | 991/2190 [09:07<11:00,  1.82it/s]
+start_acc: 0.6166, end_acc: 0.6655, span_acc: 0.5207, em: 0.5789, f1: 0.7227, loss: 2.4917 ||:  46%|####6     | 1010/2190 [09:17<10:42,  1.84it/s]
+start_acc: 0.6165, end_acc: 0.6656, span_acc: 0.5205, em: 0.5787, f1: 0.7225, loss: 2.4925 ||:  47%|####7     | 1030/2190 [09:27<10:20,  1.87it/s]
+start_acc: 0.6164, end_acc: 0.6653, span_acc: 0.5203, em: 0.5786, f1: 0.7225, loss: 2.4926 ||:  48%|####7     | 1051/2190 [09:37<09:51,  1.93it/s]
+start_acc: 0.6172, end_acc: 0.6656, span_acc: 0.5207, em: 0.5792, f1: 0.7232, loss: 2.4892 ||:  49%|####8     | 1072/2190 [09:47<09:30,  1.96it/s]
+start_acc: 0.6172, end_acc: 0.6658, span_acc: 0.5208, em: 0.5795, f1: 0.7235, loss: 2.4897 ||:  50%|####9     | 1093/2190 [10:01<09:59,  1.83it/s]
+start_acc: 0.6177, end_acc: 0.6660, span_acc: 0.5212, em: 0.5798, f1: 0.7238, loss: 2.4874 ||:  51%|#####     | 1111/2190 [10:11<09:53,  1.82it/s]
+start_acc: 0.6178, end_acc: 0.6661, span_acc: 0.5213, em: 0.5801, f1: 0.7239, loss: 2.4875 ||:  52%|#####1    | 1130/2190 [10:21<09:36,  1.84it/s]
+start_acc: 0.6176, end_acc: 0.6660, span_acc: 0.5210, em: 0.5798, f1: 0.7237, loss: 2.4874 ||:  53%|#####2    | 1150/2190 [10:31<09:12,  1.88it/s]
+start_acc: 0.6179, end_acc: 0.6662, span_acc: 0.5212, em: 0.5802, f1: 0.7241, loss: 2.4867 ||:  53%|#####3    | 1170/2190 [10:42<09:11,  1.85it/s]
+start_acc: 0.6182, end_acc: 0.6663, span_acc: 0.5216, em: 0.5805, f1: 0.7243, loss: 2.4866 ||:  54%|#####4    | 1188/2190 [10:52<09:06,  1.83it/s]
+start_acc: 0.6183, end_acc: 0.6666, span_acc: 0.5218, em: 0.5809, f1: 0.7245, loss: 2.4855 ||:  55%|#####5    | 1208/2190 [11:02<08:46,  1.87it/s]
+start_acc: 0.6187, end_acc: 0.6671, span_acc: 0.5225, em: 0.5815, f1: 0.7250, loss: 2.4813 ||:  56%|#####6    | 1228/2190 [11:12<08:25,  1.90it/s]
+start_acc: 0.6188, end_acc: 0.6674, span_acc: 0.5228, em: 0.5819, f1: 0.7254, loss: 2.4797 ||:  57%|#####6    | 1248/2190 [11:24<08:34,  1.83it/s]
+start_acc: 0.6188, end_acc: 0.6673, span_acc: 0.5227, em: 0.5820, f1: 0.7256, loss: 2.4790 ||:  58%|#####7    | 1268/2190 [11:35<08:15,  1.86it/s]
+start_acc: 0.6189, end_acc: 0.6674, span_acc: 0.5230, em: 0.5823, f1: 0.7258, loss: 2.4776 ||:  59%|#####8    | 1288/2190 [11:45<08:02,  1.87it/s]
+start_acc: 0.6195, end_acc: 0.6674, span_acc: 0.5234, em: 0.5827, f1: 0.7261, loss: 2.4765 ||:  60%|#####9    | 1307/2190 [11:56<08:00,  1.84it/s]
+start_acc: 0.6194, end_acc: 0.6675, span_acc: 0.5234, em: 0.5828, f1: 0.7261, loss: 2.4750 ||:  61%|######    | 1325/2190 [12:06<07:54,  1.82it/s]
+start_acc: 0.6195, end_acc: 0.6675, span_acc: 0.5233, em: 0.5828, f1: 0.7262, loss: 2.4740 ||:  61%|######1   | 1344/2190 [12:16<07:40,  1.84it/s]
+start_acc: 0.6197, end_acc: 0.6682, span_acc: 0.5238, em: 0.5834, f1: 0.7267, loss: 2.4708 ||:  62%|######2   | 1367/2190 [12:26<07:03,  1.94it/s]
+start_acc: 0.6202, end_acc: 0.6685, span_acc: 0.5244, em: 0.5838, f1: 0.7270, loss: 2.4660 ||:  63%|######3   | 1390/2190 [12:38<06:50,  1.95it/s]
+start_acc: 0.6204, end_acc: 0.6686, span_acc: 0.5243, em: 0.5836, f1: 0.7271, loss: 2.4665 ||:  64%|######4   | 1410/2190 [12:49<06:45,  1.92it/s]
+start_acc: 0.6204, end_acc: 0.6691, span_acc: 0.5246, em: 0.5840, f1: 0.7273, loss: 2.4645 ||:  65%|######5   | 1429/2190 [12:59<06:42,  1.89it/s]
+start_acc: 0.6199, end_acc: 0.6692, span_acc: 0.5243, em: 0.5840, f1: 0.7272, loss: 2.4649 ||:  66%|######6   | 1452/2190 [13:10<06:12,  1.98it/s]
+start_acc: 0.6204, end_acc: 0.6690, span_acc: 0.5245, em: 0.5840, f1: 0.7274, loss: 2.4648 ||:  67%|######7   | 1475/2190 [13:23<06:20,  1.88it/s]
+start_acc: 0.6204, end_acc: 0.6690, span_acc: 0.5244, em: 0.5841, f1: 0.7275, loss: 2.4638 ||:  68%|######8   | 1495/2190 [13:34<06:07,  1.89it/s]
+start_acc: 0.6206, end_acc: 0.6689, span_acc: 0.5245, em: 0.5844, f1: 0.7277, loss: 2.4628 ||:  69%|######9   | 1515/2190 [13:44<05:57,  1.89it/s]
+start_acc: 0.6209, end_acc: 0.6691, span_acc: 0.5248, em: 0.5846, f1: 0.7279, loss: 2.4612 ||:  70%|#######   | 1535/2190 [13:55<05:46,  1.89it/s]
+start_acc: 0.6213, end_acc: 0.6693, span_acc: 0.5252, em: 0.5850, f1: 0.7281, loss: 2.4588 ||:  71%|#######1  | 1556/2190 [14:05<05:29,  1.92it/s]
+start_acc: 0.6214, end_acc: 0.6691, span_acc: 0.5252, em: 0.5850, f1: 0.7281, loss: 2.4579 ||:  72%|#######2  | 1577/2190 [14:16<05:16,  1.94it/s]
+start_acc: 0.6217, end_acc: 0.6690, span_acc: 0.5254, em: 0.5852, f1: 0.7282, loss: 2.4567 ||:  73%|#######2  | 1597/2190 [14:26<05:04,  1.95it/s]
+start_acc: 0.6218, end_acc: 0.6692, span_acc: 0.5257, em: 0.5855, f1: 0.7285, loss: 2.4549 ||:  74%|#######3  | 1617/2190 [14:37<04:55,  1.94it/s]
+start_acc: 0.6220, end_acc: 0.6694, span_acc: 0.5260, em: 0.5857, f1: 0.7286, loss: 2.4544 ||:  75%|#######4  | 1637/2190 [14:47<04:47,  1.92it/s]
+start_acc: 0.6218, end_acc: 0.6694, span_acc: 0.5261, em: 0.5860, f1: 0.7287, loss: 2.4556 ||:  76%|#######5  | 1656/2190 [14:58<04:47,  1.85it/s]
+start_acc: 0.6220, end_acc: 0.6693, span_acc: 0.5261, em: 0.5860, f1: 0.7288, loss: 2.4551 ||:  77%|#######6  | 1676/2190 [15:09<04:33,  1.88it/s]
+start_acc: 0.6217, end_acc: 0.6691, span_acc: 0.5259, em: 0.5858, f1: 0.7287, loss: 2.4567 ||:  77%|#######7  | 1696/2190 [15:19<04:24,  1.87it/s]
+start_acc: 0.6214, end_acc: 0.6691, span_acc: 0.5257, em: 0.5856, f1: 0.7286, loss: 2.4580 ||:  78%|#######8  | 1715/2190 [15:30<04:20,  1.82it/s]
+start_acc: 0.6213, end_acc: 0.6689, span_acc: 0.5255, em: 0.5855, f1: 0.7286, loss: 2.4580 ||:  79%|#######9  | 1736/2190 [15:41<04:01,  1.88it/s]
+start_acc: 0.6214, end_acc: 0.6689, span_acc: 0.5255, em: 0.5855, f1: 0.7286, loss: 2.4578 ||:  80%|########  | 1757/2190 [15:52<03:50,  1.88it/s]
+start_acc: 0.6214, end_acc: 0.6689, span_acc: 0.5255, em: 0.5855, f1: 0.7286, loss: 2.4576 ||:  81%|########1 | 1776/2190 [16:02<03:40,  1.88it/s]
+start_acc: 0.6220, end_acc: 0.6691, span_acc: 0.5259, em: 0.5859, f1: 0.7288, loss: 2.4544 ||:  82%|########2 | 1797/2190 [16:12<03:23,  1.93it/s]
+start_acc: 0.6220, end_acc: 0.6693, span_acc: 0.5261, em: 0.5861, f1: 0.7289, loss: 2.4538 ||:  83%|########3 | 1818/2190 [16:23<03:12,  1.94it/s]
+start_acc: 0.6220, end_acc: 0.6691, span_acc: 0.5259, em: 0.5862, f1: 0.7290, loss: 2.4539 ||:  84%|########3 | 1839/2190 [16:33<02:59,  1.96it/s]
+start_acc: 0.6220, end_acc: 0.6690, span_acc: 0.5257, em: 0.5861, f1: 0.7289, loss: 2.4541 ||:  85%|########4 | 1860/2190 [16:44<02:46,  1.98it/s]
+start_acc: 0.6220, end_acc: 0.6691, span_acc: 0.5257, em: 0.5861, f1: 0.7291, loss: 2.4543 ||:  86%|########5 | 1881/2190 [16:55<02:39,  1.93it/s]
+start_acc: 0.6220, end_acc: 0.6690, span_acc: 0.5255, em: 0.5860, f1: 0.7293, loss: 2.4547 ||:  87%|########6 | 1902/2190 [17:06<02:27,  1.95it/s]
+start_acc: 0.6220, end_acc: 0.6692, span_acc: 0.5257, em: 0.5862, f1: 0.7294, loss: 2.4540 ||:  88%|########7 | 1922/2190 [17:18<02:23,  1.87it/s]
+start_acc: 0.6223, end_acc: 0.6694, span_acc: 0.5259, em: 0.5864, f1: 0.7295, loss: 2.4530 ||:  89%|########8 | 1940/2190 [17:28<02:16,  1.83it/s]
+start_acc: 0.6225, end_acc: 0.6694, span_acc: 0.5262, em: 0.5865, f1: 0.7295, loss: 2.4526 ||:  89%|########9 | 1958/2190 [17:38<02:09,  1.79it/s]
+start_acc: 0.6228, end_acc: 0.6696, span_acc: 0.5264, em: 0.5868, f1: 0.7296, loss: 2.4514 ||:  90%|######### | 1979/2190 [17:49<01:53,  1.86it/s]
+start_acc: 0.6228, end_acc: 0.6696, span_acc: 0.5265, em: 0.5869, f1: 0.7297, loss: 2.4511 ||:  91%|#########1| 2000/2190 [17:59<01:39,  1.91it/s]
+start_acc: 0.6232, end_acc: 0.6700, span_acc: 0.5269, em: 0.5872, f1: 0.7300, loss: 2.4483 ||:  92%|#########2| 2021/2190 [18:11<01:29,  1.88it/s]
+start_acc: 0.6234, end_acc: 0.6702, span_acc: 0.5269, em: 0.5872, f1: 0.7302, loss: 2.4464 ||:  93%|#########3| 2040/2190 [18:21<01:19,  1.88it/s]
+start_acc: 0.6234, end_acc: 0.6701, span_acc: 0.5267, em: 0.5870, f1: 0.7301, loss: 2.4467 ||:  94%|#########4| 2060/2190 [18:31<01:08,  1.90it/s]
+start_acc: 0.6234, end_acc: 0.6700, span_acc: 0.5265, em: 0.5868, f1: 0.7302, loss: 2.4467 ||:  95%|#########5| 2081/2190 [18:41<00:56,  1.93it/s]
+start_acc: 0.6238, end_acc: 0.6704, span_acc: 0.5269, em: 0.5872, f1: 0.7304, loss: 2.4450 ||:  96%|#########5| 2102/2190 [18:52<00:44,  1.97it/s]
+start_acc: 0.6238, end_acc: 0.6703, span_acc: 0.5268, em: 0.5871, f1: 0.7302, loss: 2.4454 ||:  97%|#########6| 2123/2190 [19:05<00:36,  1.84it/s]
+start_acc: 0.6237, end_acc: 0.6699, span_acc: 0.5267, em: 0.5869, f1: 0.7302, loss: 2.4461 ||:  98%|#########7| 2143/2190 [19:15<00:24,  1.88it/s]
+start_acc: 0.6238, end_acc: 0.6699, span_acc: 0.5268, em: 0.5870, f1: 0.7301, loss: 2.4464 ||:  99%|#########8| 2163/2190 [19:28<00:15,  1.74it/s]
+start_acc: 0.6239, end_acc: 0.6701, span_acc: 0.5269, em: 0.5871, f1: 0.7302, loss: 2.4453 ||: 100%|#########9| 2183/2190 [19:39<00:03,  1.79it/s]
+start_acc: 0.6240, end_acc: 0.6701, span_acc: 0.5270, em: 0.5872, f1: 0.7303, loss: 2.4447 ||: 100%|##########| 2190/2190 [19:42<00:00,  1.85it/s]
+
+2019-06-07 03:29:43,448 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/265 [00:00<?, ?it/s]
+start_acc: 0.6965, end_acc: 0.7236, span_acc: 0.5979, em: 0.7229, f1: 0.8174, loss: 1.9259 ||:  14%|#3        | 36/265 [00:10<01:04,  3.56it/s]
+start_acc: 0.6965, end_acc: 0.7260, span_acc: 0.6010, em: 0.7333, f1: 0.8263, loss: 1.9416 ||:  27%|##7       | 72/265 [00:20<00:55,  3.49it/s]
+start_acc: 0.7021, end_acc: 0.7304, span_acc: 0.6057, em: 0.7417, f1: 0.8319, loss: 1.9146 ||:  40%|####      | 106/265 [00:32<00:47,  3.33it/s]
+start_acc: 0.6991, end_acc: 0.7305, span_acc: 0.6055, em: 0.7460, f1: 0.8347, loss: 1.9208 ||:  51%|#####1    | 136/265 [00:43<00:41,  3.14it/s]
+start_acc: 0.6974, end_acc: 0.7284, span_acc: 0.6032, em: 0.7416, f1: 0.8313, loss: 1.9282 ||:  62%|######1   | 164/265 [00:53<00:34,  2.94it/s]
+start_acc: 0.6982, end_acc: 0.7295, span_acc: 0.6042, em: 0.7437, f1: 0.8314, loss: 1.9258 ||:  72%|#######1  | 190/265 [01:05<00:27,  2.73it/s]
+start_acc: 0.7006, end_acc: 0.7308, span_acc: 0.6070, em: 0.7452, f1: 0.8318, loss: 1.9183 ||:  81%|########  | 214/265 [01:16<00:20,  2.52it/s]
+start_acc: 0.6976, end_acc: 0.7281, span_acc: 0.6046, em: 0.7425, f1: 0.8292, loss: 1.9412 ||:  89%|########9 | 236/265 [01:27<00:12,  2.29it/s]
+start_acc: 0.6969, end_acc: 0.7282, span_acc: 0.6044, em: 0.7435, f1: 0.8297, loss: 1.9533 ||:  96%|#########6| 255/265 [01:40<00:04,  2.01it/s]
+start_acc: 0.6945, end_acc: 0.7267, span_acc: 0.6026, em: 0.7428, f1: 0.8292, loss: 1.9795 ||: 100%|##########| 265/265 [01:49<00:00,  2.41it/s]
+
+2019-06-07 03:31:33,372 - INFO - allennlp.training.tensorboard_writer -                     Training |  Validation
+2019-06-07 03:31:33,372 - INFO - allennlp.training.tensorboard_writer - f1              |     0.730  |     0.829
+2019-06-07 03:31:33,373 - INFO - allennlp.training.tensorboard_writer - gpu_4_memory_MB |  15771.000  |       N/A
+2019-06-07 03:31:33,373 - INFO - allennlp.training.tensorboard_writer - start_acc       |     0.624  |     0.695
+2019-06-07 03:31:33,374 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB |   673.000  |       N/A
+2019-06-07 03:31:33,374 - INFO - allennlp.training.tensorboard_writer - end_acc         |     0.670  |     0.727
+2019-06-07 03:31:33,374 - INFO - allennlp.training.tensorboard_writer - loss            |     2.445  |     1.979
+2019-06-07 03:31:33,375 - INFO - allennlp.training.tensorboard_writer - gpu_2_memory_MB |   671.000  |       N/A
+2019-06-07 03:31:33,375 - INFO - allennlp.training.tensorboard_writer - gpu_7_memory_MB |  12425.000  |       N/A
+2019-06-07 03:31:33,375 - INFO - allennlp.training.tensorboard_writer - gpu_3_memory_MB |    10.000  |       N/A
+2019-06-07 03:31:33,376 - INFO - allennlp.training.tensorboard_writer - gpu_5_memory_MB |  12283.000  |       N/A
+2019-06-07 03:31:33,376 - INFO - allennlp.training.tensorboard_writer - em              |     0.587  |     0.743
+2019-06-07 03:31:33,376 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB   |  5893.516  |       N/A
+2019-06-07 03:31:33,376 - INFO - allennlp.training.tensorboard_writer - gpu_1_memory_MB |     0.000  |       N/A
+2019-06-07 03:31:33,377 - INFO - allennlp.training.tensorboard_writer - gpu_6_memory_MB |     0.000  |       N/A
+2019-06-07 03:31:33,377 - INFO - allennlp.training.tensorboard_writer - span_acc        |     0.527  |     0.603
+2019-06-07 03:31:33,913 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'model_v4.2/best.th'.
+2019-06-07 03:31:34,402 - INFO - allennlp.training.trainer - Epoch duration: 0:21:35.056681
+2019-06-07 03:31:34,402 - INFO - allennlp.training.trainer - Estimated training time remaining: 6:41:05
+2019-06-07 03:31:34,402 - INFO - allennlp.training.trainer - Epoch 2/19
+2019-06-07 03:31:34,403 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 5931.192
+2019-06-07 03:31:35,313 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 673
+2019-06-07 03:31:35,313 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 10
+2019-06-07 03:31:35,313 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 671
+2019-06-07 03:31:35,314 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 10
+2019-06-07 03:31:35,314 - INFO - allennlp.training.trainer - GPU 4 memory usage MB: 15771
+2019-06-07 03:31:35,314 - INFO - allennlp.training.trainer - GPU 5 memory usage MB: 12283
+2019-06-07 03:31:35,314 - INFO - allennlp.training.trainer - GPU 6 memory usage MB: 0
+2019-06-07 03:31:35,314 - INFO - allennlp.training.trainer - GPU 7 memory usage MB: 13829
+2019-06-07 03:31:35,319 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/2190 [00:00<?, ?it/s]
+start_acc: 0.7000, end_acc: 0.7000, span_acc: 0.6000, em: 0.6000, f1: 0.7705, loss: 2.0593 ||:   0%|          | 1/2190 [00:16<10:18:54, 16.96s/it]
+start_acc: 0.6775, end_acc: 0.7013, span_acc: 0.5600, em: 0.6100, f1: 0.7708, loss: 2.0231 ||:   1%|          | 20/2190 [00:27<7:15:20, 12.04s/it]
+start_acc: 0.6859, end_acc: 0.7147, span_acc: 0.5756, em: 0.6321, f1: 0.7792, loss: 2.0303 ||:   2%|1         | 39/2190 [00:37<5:08:08,  8.60s/it]
+start_acc: 0.6851, end_acc: 0.7140, span_acc: 0.5785, em: 0.6386, f1: 0.7781, loss: 2.0483 ||:   3%|2         | 57/2190 [00:48<3:40:07,  6.19s/it]
+start_acc: 0.6843, end_acc: 0.7187, span_acc: 0.5817, em: 0.6393, f1: 0.7763, loss: 2.0527 ||:   3%|3         | 75/2190 [00:58<2:38:49,  4.51s/it]
+start_acc: 0.6809, end_acc: 0.7193, span_acc: 0.5817, em: 0.6399, f1: 0.7772, loss: 2.0340 ||:   4%|4         | 97/2190 [01:09<1:55:03,  3.30s/it]
+start_acc: 0.6824, end_acc: 0.7186, span_acc: 0.5824, em: 0.6386, f1: 0.7768, loss: 2.0449 ||:   5%|5         | 118/2190 [01:20<1:25:27,  2.47s/it]
+start_acc: 0.6794, end_acc: 0.7210, span_acc: 0.5812, em: 0.6385, f1: 0.7781, loss: 2.0439 ||:   6%|6         | 137/2190 [01:31<1:05:03,  1.90s/it]
+start_acc: 0.6799, end_acc: 0.7189, span_acc: 0.5803, em: 0.6396, f1: 0.7784, loss: 2.0482 ||:   7%|7         | 157/2190 [01:42<50:27,  1.49s/it]  
+start_acc: 0.6795, end_acc: 0.7184, span_acc: 0.5789, em: 0.6395, f1: 0.7782, loss: 2.0488 ||:   8%|8         | 178/2190 [01:52<39:51,  1.19s/it]
+start_acc: 0.6809, end_acc: 0.7192, span_acc: 0.5810, em: 0.6415, f1: 0.7799, loss: 2.0447 ||:   9%|9         | 199/2190 [02:02<32:31,  1.02it/s]
+start_acc: 0.6792, end_acc: 0.7188, span_acc: 0.5807, em: 0.6417, f1: 0.7796, loss: 2.0549 ||:  10%|#         | 220/2190 [02:15<28:29,  1.15it/s]
+start_acc: 0.6781, end_acc: 0.7180, span_acc: 0.5800, em: 0.6428, f1: 0.7801, loss: 2.0626 ||:  11%|#         | 239/2190 [02:26<25:12,  1.29it/s]
+start_acc: 0.6775, end_acc: 0.7177, span_acc: 0.5787, em: 0.6413, f1: 0.7805, loss: 2.0604 ||:  12%|#1        | 260/2190 [02:36<22:06,  1.45it/s]
+start_acc: 0.6766, end_acc: 0.7184, span_acc: 0.5791, em: 0.6411, f1: 0.7805, loss: 2.0567 ||:  13%|#2        | 282/2190 [02:46<19:44,  1.61it/s]
+start_acc: 0.6775, end_acc: 0.7171, span_acc: 0.5800, em: 0.6425, f1: 0.7806, loss: 2.0573 ||:  14%|#3        | 305/2190 [02:56<17:53,  1.76it/s]
+start_acc: 0.6761, end_acc: 0.7166, span_acc: 0.5794, em: 0.6410, f1: 0.7792, loss: 2.0658 ||:  15%|#4        | 328/2190 [03:11<18:22,  1.69it/s]
+start_acc: 0.6758, end_acc: 0.7169, span_acc: 0.5787, em: 0.6400, f1: 0.7785, loss: 2.0595 ||:  16%|#5        | 347/2190 [03:21<17:40,  1.74it/s]
+start_acc: 0.6756, end_acc: 0.7167, span_acc: 0.5788, em: 0.6403, f1: 0.7785, loss: 2.0612 ||:  17%|#6        | 369/2190 [03:32<16:29,  1.84it/s]
+start_acc: 0.6756, end_acc: 0.7168, span_acc: 0.5788, em: 0.6400, f1: 0.7778, loss: 2.0576 ||:  18%|#7        | 391/2190 [03:42<15:46,  1.90it/s]
+start_acc: 0.6741, end_acc: 0.7151, span_acc: 0.5774, em: 0.6380, f1: 0.7759, loss: 2.0755 ||:  19%|#8        | 412/2190 [03:56<16:30,  1.80it/s]
+start_acc: 0.6737, end_acc: 0.7158, span_acc: 0.5773, em: 0.6379, f1: 0.7763, loss: 2.0728 ||:  20%|#9        | 432/2190 [04:06<15:53,  1.84it/s]
+start_acc: 0.6718, end_acc: 0.7149, span_acc: 0.5753, em: 0.6362, f1: 0.7753, loss: 2.0816 ||:  21%|##        | 452/2190 [04:17<15:46,  1.84it/s]
+start_acc: 0.6714, end_acc: 0.7147, span_acc: 0.5748, em: 0.6354, f1: 0.7745, loss: 2.0852 ||:  22%|##1       | 472/2190 [04:27<15:16,  1.87it/s]
+start_acc: 0.6718, end_acc: 0.7153, span_acc: 0.5751, em: 0.6359, f1: 0.7752, loss: 2.0793 ||:  22%|##2       | 492/2190 [04:38<15:18,  1.85it/s]
+start_acc: 0.6721, end_acc: 0.7157, span_acc: 0.5756, em: 0.6367, f1: 0.7758, loss: 2.0780 ||:  23%|##3       | 512/2190 [04:48<14:48,  1.89it/s]
+start_acc: 0.6720, end_acc: 0.7151, span_acc: 0.5753, em: 0.6360, f1: 0.7750, loss: 2.0795 ||:  24%|##4       | 532/2190 [04:59<14:47,  1.87it/s]
+start_acc: 0.6715, end_acc: 0.7147, span_acc: 0.5748, em: 0.6356, f1: 0.7747, loss: 2.0829 ||:  25%|##5       | 551/2190 [05:09<14:36,  1.87it/s]
+start_acc: 0.6717, end_acc: 0.7142, span_acc: 0.5746, em: 0.6359, f1: 0.7751, loss: 2.0820 ||:  26%|##6       | 572/2190 [05:20<14:08,  1.91it/s]
+start_acc: 0.6706, end_acc: 0.7132, span_acc: 0.5733, em: 0.6350, f1: 0.7742, loss: 2.0899 ||:  27%|##7       | 592/2190 [05:31<14:06,  1.89it/s]
+start_acc: 0.6702, end_acc: 0.7126, span_acc: 0.5729, em: 0.6346, f1: 0.7740, loss: 2.0938 ||:  28%|##7       | 613/2190 [05:41<13:39,  1.92it/s]
+start_acc: 0.6697, end_acc: 0.7124, span_acc: 0.5726, em: 0.6343, f1: 0.7736, loss: 2.0952 ||:  29%|##8       | 635/2190 [05:51<13:06,  1.98it/s]
+start_acc: 0.6692, end_acc: 0.7122, span_acc: 0.5725, em: 0.6345, f1: 0.7738, loss: 2.0990 ||:  30%|###       | 657/2190 [06:03<13:01,  1.96it/s]
+start_acc: 0.6693, end_acc: 0.7120, span_acc: 0.5723, em: 0.6343, f1: 0.7736, loss: 2.0967 ||:  31%|###1      | 679/2190 [06:13<12:31,  2.01it/s]
+start_acc: 0.6688, end_acc: 0.7119, span_acc: 0.5718, em: 0.6340, f1: 0.7737, loss: 2.0967 ||:  32%|###2      | 701/2190 [06:25<12:35,  1.97it/s]
+start_acc: 0.6687, end_acc: 0.7116, span_acc: 0.5712, em: 0.6336, f1: 0.7736, loss: 2.0972 ||:  33%|###3      | 724/2190 [06:35<11:59,  2.04it/s]
+start_acc: 0.6685, end_acc: 0.7111, span_acc: 0.5709, em: 0.6334, f1: 0.7733, loss: 2.0979 ||:  34%|###4      | 747/2190 [06:46<11:42,  2.05it/s]
+start_acc: 0.6682, end_acc: 0.7114, span_acc: 0.5707, em: 0.6338, f1: 0.7732, loss: 2.0973 ||:  35%|###5      | 768/2190 [06:59<12:20,  1.92it/s]
+start_acc: 0.6683, end_acc: 0.7120, span_acc: 0.5711, em: 0.6343, f1: 0.7736, loss: 2.0952 ||:  36%|###5      | 788/2190 [07:09<12:02,  1.94it/s]
+start_acc: 0.6680, end_acc: 0.7120, span_acc: 0.5709, em: 0.6340, f1: 0.7736, loss: 2.0970 ||:  37%|###6      | 808/2190 [07:20<12:05,  1.91it/s]
+start_acc: 0.6679, end_acc: 0.7119, span_acc: 0.5704, em: 0.6334, f1: 0.7733, loss: 2.0971 ||:  38%|###7      | 830/2190 [07:30<11:29,  1.97it/s]
+start_acc: 0.6677, end_acc: 0.7122, span_acc: 0.5704, em: 0.6337, f1: 0.7737, loss: 2.0971 ||:  39%|###8      | 852/2190 [07:42<11:25,  1.95it/s]
+start_acc: 0.6677, end_acc: 0.7120, span_acc: 0.5701, em: 0.6333, f1: 0.7736, loss: 2.0988 ||:  40%|###9      | 873/2190 [07:52<11:05,  1.98it/s]
+start_acc: 0.6681, end_acc: 0.7114, span_acc: 0.5701, em: 0.6333, f1: 0.7735, loss: 2.1007 ||:  41%|####      | 894/2190 [08:03<11:12,  1.93it/s]
+start_acc: 0.6680, end_acc: 0.7110, span_acc: 0.5698, em: 0.6327, f1: 0.7730, loss: 2.1001 ||:  42%|####1     | 914/2190 [08:14<10:56,  1.94it/s]
+start_acc: 0.6681, end_acc: 0.7108, span_acc: 0.5697, em: 0.6323, f1: 0.7726, loss: 2.1002 ||:  43%|####2     | 934/2190 [08:24<10:44,  1.95it/s]
+start_acc: 0.6683, end_acc: 0.7105, span_acc: 0.5695, em: 0.6324, f1: 0.7729, loss: 2.1011 ||:  44%|####3     | 954/2190 [08:35<10:56,  1.88it/s]
+start_acc: 0.6682, end_acc: 0.7097, span_acc: 0.5692, em: 0.6318, f1: 0.7722, loss: 2.1054 ||:  44%|####4     | 972/2190 [08:45<11:00,  1.84it/s]
+start_acc: 0.6687, end_acc: 0.7102, span_acc: 0.5696, em: 0.6322, f1: 0.7726, loss: 2.1024 ||:  45%|####5     | 993/2190 [08:56<10:28,  1.90it/s]
+start_acc: 0.6684, end_acc: 0.7104, span_acc: 0.5694, em: 0.6322, f1: 0.7726, loss: 2.1037 ||:  46%|####6     | 1014/2190 [09:06<10:07,  1.94it/s]
+start_acc: 0.6679, end_acc: 0.7103, span_acc: 0.5689, em: 0.6320, f1: 0.7726, loss: 2.1053 ||:  47%|####7     | 1035/2190 [09:16<09:48,  1.96it/s]
+start_acc: 0.6681, end_acc: 0.7102, span_acc: 0.5691, em: 0.6324, f1: 0.7727, loss: 2.1072 ||:  48%|####8     | 1056/2190 [09:28<09:53,  1.91it/s]
+start_acc: 0.6682, end_acc: 0.7096, span_acc: 0.5685, em: 0.6319, f1: 0.7725, loss: 2.1086 ||:  49%|####9     | 1075/2190 [09:38<09:48,  1.89it/s]
+start_acc: 0.6681, end_acc: 0.7097, span_acc: 0.5686, em: 0.6318, f1: 0.7723, loss: 2.1094 ||:  50%|####9     | 1094/2190 [09:50<10:04,  1.81it/s]
+start_acc: 0.6680, end_acc: 0.7098, span_acc: 0.5683, em: 0.6318, f1: 0.7723, loss: 2.1109 ||:  51%|#####     | 1115/2190 [10:00<09:31,  1.88it/s]
+start_acc: 0.6682, end_acc: 0.7101, span_acc: 0.5690, em: 0.6324, f1: 0.7724, loss: 2.1087 ||:  52%|#####1    | 1136/2190 [10:12<09:31,  1.85it/s]
+start_acc: 0.6682, end_acc: 0.7102, span_acc: 0.5689, em: 0.6323, f1: 0.7722, loss: 2.1098 ||:  53%|#####2    | 1154/2190 [10:23<09:40,  1.78it/s]
+start_acc: 0.6674, end_acc: 0.7099, span_acc: 0.5683, em: 0.6315, f1: 0.7717, loss: 2.1124 ||:  54%|#####3    | 1173/2190 [10:33<09:27,  1.79it/s]
+start_acc: 0.6672, end_acc: 0.7099, span_acc: 0.5683, em: 0.6316, f1: 0.7716, loss: 2.1115 ||:  54%|#####4    | 1193/2190 [10:44<09:04,  1.83it/s]
+start_acc: 0.6674, end_acc: 0.7098, span_acc: 0.5685, em: 0.6316, f1: 0.7715, loss: 2.1111 ||:  55%|#####5    | 1213/2190 [10:54<08:43,  1.87it/s]
+start_acc: 0.6673, end_acc: 0.7099, span_acc: 0.5683, em: 0.6312, f1: 0.7715, loss: 2.1113 ||:  56%|#####6    | 1233/2190 [11:05<08:36,  1.85it/s]
+start_acc: 0.6673, end_acc: 0.7101, span_acc: 0.5684, em: 0.6313, f1: 0.7717, loss: 2.1120 ||:  57%|#####7    | 1252/2190 [11:15<08:30,  1.84it/s]
+start_acc: 0.6673, end_acc: 0.7102, span_acc: 0.5687, em: 0.6318, f1: 0.7718, loss: 2.1128 ||:  58%|#####8    | 1271/2190 [11:26<08:26,  1.81it/s]
+start_acc: 0.6670, end_acc: 0.7105, span_acc: 0.5687, em: 0.6316, f1: 0.7718, loss: 2.1128 ||:  59%|#####8    | 1290/2190 [11:36<08:12,  1.83it/s]
+start_acc: 0.6673, end_acc: 0.7109, span_acc: 0.5692, em: 0.6320, f1: 0.7720, loss: 2.1103 ||:  60%|#####9    | 1311/2190 [11:46<07:43,  1.90it/s]
+start_acc: 0.6674, end_acc: 0.7114, span_acc: 0.5695, em: 0.6322, f1: 0.7722, loss: 2.1101 ||:  61%|######    | 1332/2190 [11:58<07:34,  1.89it/s]
+start_acc: 0.6672, end_acc: 0.7111, span_acc: 0.5694, em: 0.6320, f1: 0.7719, loss: 2.1118 ||:  62%|######1   | 1351/2190 [12:08<07:24,  1.89it/s]
+start_acc: 0.6669, end_acc: 0.7110, span_acc: 0.5692, em: 0.6319, f1: 0.7718, loss: 2.1124 ||:  63%|######2   | 1373/2190 [12:18<06:56,  1.96it/s]
+start_acc: 0.6665, end_acc: 0.7105, span_acc: 0.5689, em: 0.6318, f1: 0.7716, loss: 2.1139 ||:  64%|######3   | 1395/2190 [12:29<06:46,  1.96it/s]
+start_acc: 0.6672, end_acc: 0.7108, span_acc: 0.5695, em: 0.6323, f1: 0.7721, loss: 2.1106 ||:  65%|######4   | 1415/2190 [12:40<06:36,  1.96it/s]
+start_acc: 0.6674, end_acc: 0.7108, span_acc: 0.5697, em: 0.6323, f1: 0.7721, loss: 2.1105 ||:  66%|######5   | 1435/2190 [12:52<06:53,  1.83it/s]
+start_acc: 0.6676, end_acc: 0.7106, span_acc: 0.5697, em: 0.6322, f1: 0.7719, loss: 2.1112 ||:  66%|######6   | 1454/2190 [13:02<06:39,  1.84it/s]
+start_acc: 0.6676, end_acc: 0.7103, span_acc: 0.5694, em: 0.6319, f1: 0.7718, loss: 2.1124 ||:  67%|######7   | 1475/2190 [13:12<06:15,  1.91it/s]
+start_acc: 0.6677, end_acc: 0.7106, span_acc: 0.5695, em: 0.6321, f1: 0.7720, loss: 2.1101 ||:  68%|######8   | 1497/2190 [13:23<05:50,  1.98it/s]
+start_acc: 0.6675, end_acc: 0.7107, span_acc: 0.5696, em: 0.6323, f1: 0.7720, loss: 2.1112 ||:  69%|######9   | 1519/2190 [13:36<05:59,  1.87it/s]
+start_acc: 0.6674, end_acc: 0.7107, span_acc: 0.5696, em: 0.6324, f1: 0.7722, loss: 2.1110 ||:  70%|#######   | 1538/2190 [13:46<05:47,  1.88it/s]
+start_acc: 0.6673, end_acc: 0.7109, span_acc: 0.5696, em: 0.6324, f1: 0.7722, loss: 2.1106 ||:  71%|#######1  | 1557/2190 [13:56<05:38,  1.87it/s]
+start_acc: 0.6670, end_acc: 0.7106, span_acc: 0.5693, em: 0.6321, f1: 0.7720, loss: 2.1119 ||:  72%|#######1  | 1576/2190 [14:08<05:46,  1.77it/s]
+start_acc: 0.6669, end_acc: 0.7105, span_acc: 0.5692, em: 0.6321, f1: 0.7719, loss: 2.1117 ||:  73%|#######2  | 1597/2190 [14:19<05:22,  1.84it/s]
+start_acc: 0.6671, end_acc: 0.7104, span_acc: 0.5693, em: 0.6323, f1: 0.7721, loss: 2.1113 ||:  74%|#######3  | 1618/2190 [14:30<05:09,  1.85it/s]
+start_acc: 0.6677, end_acc: 0.7107, span_acc: 0.5699, em: 0.6328, f1: 0.7723, loss: 2.1083 ||:  75%|#######4  | 1642/2190 [14:40<04:39,  1.96it/s]
+start_acc: 0.6677, end_acc: 0.7108, span_acc: 0.5702, em: 0.6332, f1: 0.7724, loss: 2.1070 ||:  76%|#######6  | 1665/2190 [14:52<04:26,  1.97it/s]
+start_acc: 0.6675, end_acc: 0.7108, span_acc: 0.5700, em: 0.6331, f1: 0.7723, loss: 2.1080 ||:  77%|#######6  | 1686/2190 [15:02<04:12,  1.99it/s]
+start_acc: 0.6676, end_acc: 0.7111, span_acc: 0.5703, em: 0.6334, f1: 0.7727, loss: 2.1066 ||:  78%|#######7  | 1707/2190 [15:13<04:04,  1.98it/s]
+start_acc: 0.6677, end_acc: 0.7111, span_acc: 0.5705, em: 0.6334, f1: 0.7727, loss: 2.1056 ||:  79%|#######8  | 1727/2190 [15:23<03:55,  1.96it/s]
+start_acc: 0.6677, end_acc: 0.7111, span_acc: 0.5706, em: 0.6334, f1: 0.7726, loss: 2.1077 ||:  80%|#######9  | 1747/2190 [15:35<03:53,  1.90it/s]
+start_acc: 0.6679, end_acc: 0.7114, span_acc: 0.5711, em: 0.6338, f1: 0.7727, loss: 2.1072 ||:  81%|########  | 1767/2190 [15:45<03:40,  1.91it/s]
+start_acc: 0.6679, end_acc: 0.7115, span_acc: 0.5712, em: 0.6340, f1: 0.7729, loss: 2.1071 ||:  82%|########1 | 1787/2190 [16:00<04:00,  1.68it/s]
+start_acc: 0.6678, end_acc: 0.7115, span_acc: 0.5710, em: 0.6338, f1: 0.7728, loss: 2.1075 ||:  82%|########2 | 1805/2190 [16:10<03:45,  1.70it/s]
+start_acc: 0.6675, end_acc: 0.7115, span_acc: 0.5709, em: 0.6338, f1: 0.7727, loss: 2.1082 ||:  83%|########3 | 1826/2190 [16:21<03:23,  1.79it/s]
+start_acc: 0.6674, end_acc: 0.7113, span_acc: 0.5707, em: 0.6337, f1: 0.7727, loss: 2.1096 ||:  84%|########4 | 1847/2190 [16:31<03:07,  1.83it/s]
+start_acc: 0.6673, end_acc: 0.7115, span_acc: 0.5707, em: 0.6337, f1: 0.7727, loss: 2.1093 ||:  85%|########5 | 1868/2190 [16:42<02:51,  1.88it/s]
+start_acc: 0.6674, end_acc: 0.7114, span_acc: 0.5708, em: 0.6336, f1: 0.7727, loss: 2.1091 ||:  86%|########6 | 1888/2190 [16:54<02:46,  1.81it/s]
+start_acc: 0.6673, end_acc: 0.7113, span_acc: 0.5706, em: 0.6335, f1: 0.7724, loss: 2.1109 ||:  87%|########7 | 1907/2190 [17:04<02:35,  1.82it/s]
+start_acc: 0.6674, end_acc: 0.7114, span_acc: 0.5708, em: 0.6335, f1: 0.7724, loss: 2.1100 ||:  88%|########7 | 1926/2190 [17:14<02:23,  1.84it/s]
+start_acc: 0.6672, end_acc: 0.7113, span_acc: 0.5708, em: 0.6336, f1: 0.7724, loss: 2.1111 ||:  89%|########8 | 1946/2190 [17:25<02:11,  1.86it/s]
+start_acc: 0.6670, end_acc: 0.7113, span_acc: 0.5707, em: 0.6335, f1: 0.7721, loss: 2.1124 ||:  90%|########9 | 1967/2190 [17:35<01:56,  1.92it/s]
+start_acc: 0.6667, end_acc: 0.7110, span_acc: 0.5704, em: 0.6333, f1: 0.7720, loss: 2.1145 ||:  91%|######### | 1988/2190 [17:46<01:45,  1.92it/s]
+start_acc: 0.6666, end_acc: 0.7110, span_acc: 0.5702, em: 0.6331, f1: 0.7717, loss: 2.1147 ||:  92%|#########1| 2008/2190 [17:57<01:35,  1.91it/s]
+start_acc: 0.6663, end_acc: 0.7108, span_acc: 0.5700, em: 0.6329, f1: 0.7716, loss: 2.1164 ||:  93%|#########2| 2028/2190 [18:07<01:24,  1.92it/s]
+start_acc: 0.6662, end_acc: 0.7104, span_acc: 0.5697, em: 0.6327, f1: 0.7715, loss: 2.1174 ||:  94%|#########3| 2048/2190 [18:18<01:14,  1.89it/s]
+start_acc: 0.6662, end_acc: 0.7105, span_acc: 0.5698, em: 0.6328, f1: 0.7716, loss: 2.1170 ||:  94%|#########4| 2069/2190 [18:28<01:02,  1.94it/s]
+start_acc: 0.6660, end_acc: 0.7100, span_acc: 0.5696, em: 0.6326, f1: 0.7713, loss: 2.1193 ||:  95%|#########5| 2090/2190 [18:40<00:53,  1.87it/s]
+start_acc: 0.6660, end_acc: 0.7100, span_acc: 0.5695, em: 0.6325, f1: 0.7712, loss: 2.1196 ||:  96%|#########6| 2109/2190 [18:51<00:43,  1.85it/s]
+start_acc: 0.6659, end_acc: 0.7099, span_acc: 0.5695, em: 0.6325, f1: 0.7712, loss: 2.1213 ||:  97%|#########7| 2128/2190 [19:02<00:34,  1.78it/s]
+start_acc: 0.6661, end_acc: 0.7100, span_acc: 0.5699, em: 0.6327, f1: 0.7713, loss: 2.1205 ||:  98%|#########8| 2147/2190 [19:13<00:23,  1.80it/s]
+start_acc: 0.6663, end_acc: 0.7098, span_acc: 0.5699, em: 0.6326, f1: 0.7712, loss: 2.1211 ||:  99%|#########8| 2167/2190 [19:23<00:12,  1.84it/s]
+start_acc: 0.6663, end_acc: 0.7099, span_acc: 0.5700, em: 0.6327, f1: 0.7712, loss: 2.1217 ||: 100%|#########9| 2187/2190 [19:36<00:01,  1.71it/s]
+start_acc: 0.6663, end_acc: 0.7099, span_acc: 0.5701, em: 0.6327, f1: 0.7711, loss: 2.1220 ||: 100%|##########| 2190/2190 [19:38<00:00,  1.86it/s]
+
+2019-06-07 03:51:14,140 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/265 [00:00<?, ?it/s]
+start_acc: 0.7021, end_acc: 0.7160, span_acc: 0.6042, em: 0.7396, f1: 0.8173, loss: 1.8898 ||:  14%|#3        | 36/265 [00:10<01:04,  3.52it/s]
+start_acc: 0.6976, end_acc: 0.7326, span_acc: 0.6090, em: 0.7493, f1: 0.8311, loss: 1.9244 ||:  27%|##7       | 72/265 [00:20<00:55,  3.47it/s]
+start_acc: 0.6936, end_acc: 0.7366, span_acc: 0.6064, em: 0.7514, f1: 0.8354, loss: 1.9300 ||:  40%|####      | 106/265 [00:32<00:47,  3.32it/s]
+start_acc: 0.6995, end_acc: 0.7378, span_acc: 0.6135, em: 0.7560, f1: 0.8373, loss: 1.9047 ||:  52%|#####1    | 137/265 [00:43<00:40,  3.13it/s]
+start_acc: 0.7023, end_acc: 0.7362, span_acc: 0.6130, em: 0.7565, f1: 0.8375, loss: 1.8817 ||:  62%|######2   | 165/265 [00:54<00:34,  2.94it/s]
+start_acc: 0.7010, end_acc: 0.7394, span_acc: 0.6135, em: 0.7598, f1: 0.8399, loss: 1.8703 ||:  72%|#######2  | 191/265 [01:05<00:27,  2.73it/s]
+start_acc: 0.7000, end_acc: 0.7397, span_acc: 0.6144, em: 0.7587, f1: 0.8388, loss: 1.8696 ||:  81%|########1 | 215/265 [01:16<00:19,  2.53it/s]
+start_acc: 0.7012, end_acc: 0.7388, span_acc: 0.6151, em: 0.7573, f1: 0.8391, loss: 1.8770 ||:  89%|########9 | 237/265 [01:28<00:12,  2.29it/s]
+start_acc: 0.7001, end_acc: 0.7381, span_acc: 0.6146, em: 0.7572, f1: 0.8385, loss: 1.8961 ||:  97%|#########6| 256/265 [01:40<00:04,  2.00it/s]
+start_acc: 0.6992, end_acc: 0.7378, span_acc: 0.6141, em: 0.7575, f1: 0.8393, loss: 1.9125 ||: 100%|##########| 265/265 [01:49<00:00,  2.41it/s]
+
+2019-06-07 03:53:03,914 - INFO - allennlp.training.tensorboard_writer -                     Training |  Validation
+2019-06-07 03:53:03,914 - INFO - allennlp.training.tensorboard_writer - f1              |     0.771  |     0.839
+2019-06-07 03:53:03,915 - INFO - allennlp.training.tensorboard_writer - gpu_4_memory_MB |  15771.000  |       N/A
+2019-06-07 03:53:03,915 - INFO - allennlp.training.tensorboard_writer - start_acc       |     0.666  |     0.699
+2019-06-07 03:53:03,916 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB |   673.000  |       N/A
+2019-06-07 03:53:03,916 - INFO - allennlp.training.tensorboard_writer - end_acc         |     0.710  |     0.738
+2019-06-07 03:53:03,916 - INFO - allennlp.training.tensorboard_writer - loss            |     2.122  |     1.913
+2019-06-07 03:53:03,917 - INFO - allennlp.training.tensorboard_writer - gpu_2_memory_MB |   671.000  |       N/A
+2019-06-07 03:53:03,917 - INFO - allennlp.training.tensorboard_writer - gpu_7_memory_MB |  13829.000  |       N/A
+2019-06-07 03:53:03,917 - INFO - allennlp.training.tensorboard_writer - gpu_3_memory_MB |    10.000  |       N/A
+2019-06-07 03:53:03,917 - INFO - allennlp.training.tensorboard_writer - gpu_5_memory_MB |  12283.000  |       N/A
+2019-06-07 03:53:03,918 - INFO - allennlp.training.tensorboard_writer - em              |     0.633  |     0.758
+2019-06-07 03:53:03,918 - INFO - allennlp.training.tensorboard_writer - cpu_memory_MB   |  5931.192  |       N/A
+2019-06-07 03:53:03,918 - INFO - allennlp.training.tensorboard_writer - gpu_1_memory_MB |    10.000  |       N/A
+2019-06-07 03:53:03,919 - INFO - allennlp.training.tensorboard_writer - gpu_6_memory_MB |     0.000  |       N/A
+2019-06-07 03:53:03,919 - INFO - allennlp.training.tensorboard_writer - span_acc        |     0.570  |     0.614
+2019-06-07 03:53:04,515 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'model_v4.2/best.th'.
+2019-06-07 03:53:04,961 - INFO - allennlp.training.trainer - Epoch duration: 0:21:30.558779
+2019-06-07 03:53:04,961 - INFO - allennlp.training.trainer - Estimated training time remaining: 6:14:25
+2019-06-07 03:53:04,962 - INFO - allennlp.training.trainer - Epoch 3/19
+2019-06-07 03:53:04,962 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 5951.664
+2019-06-07 03:53:06,086 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 673
+2019-06-07 03:53:06,086 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 10
+2019-06-07 03:53:06,086 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 671
+2019-06-07 03:53:06,087 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 10
+2019-06-07 03:53:06,087 - INFO - allennlp.training.trainer - GPU 4 memory usage MB: 15771
+2019-06-07 03:53:06,087 - INFO - allennlp.training.trainer - GPU 5 memory usage MB: 12283
+2019-06-07 03:53:06,087 - INFO - allennlp.training.trainer - GPU 6 memory usage MB: 0
+2019-06-07 03:53:06,087 - INFO - allennlp.training.trainer - GPU 7 memory usage MB: 15233
+2019-06-07 03:53:06,091 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/2190 [00:00<?, ?it/s]
+start_acc: 0.7750, end_acc: 0.6750, span_acc: 0.6750, em: 0.6750, f1: 0.7619, loss: 2.0236 ||:   0%|          | 1/2190 [00:17<10:31:17, 17.30s/it]
+start_acc: 0.7109, end_acc: 0.7422, span_acc: 0.6297, em: 0.6922, f1: 0.8003, loss: 1.9253 ||:   1%|          | 16/2190 [00:27<7:26:20, 12.32s/it]
+start_acc: 0.7182, end_acc: 0.7515, span_acc: 0.6311, em: 0.6864, f1: 0.8070, loss: 1.8142 ||:   2%|1         | 33/2190 [00:37<5:16:33,  8.81s/it]
+start_acc: 0.7132, end_acc: 0.7524, span_acc: 0.6236, em: 0.6821, f1: 0.8077, loss: 1.7957 ||:   2%|2         | 53/2190 [00:48<3:44:55,  6.31s/it]
+start_acc: 0.7113, end_acc: 0.7442, span_acc: 0.6151, em: 0.6757, f1: 0.8071, loss: 1.8005 ||:   3%|3         | 73/2190 [00:59<2:42:12,  4.60s/it]
+start_acc: 0.7075, end_acc: 0.7489, span_acc: 0.6126, em: 0.6785, f1: 0.8090, loss: 1.8006 ||:   4%|4         | 93/2190 [01:10<1:57:50,  3.37s/it]
+start_acc: 0.7035, end_acc: 0.7449, span_acc: 0.6077, em: 0.6752, f1: 0.8054, loss: 1.8321 ||:   5%|5         | 113/2190 [01:21<1:27:26,  2.53s/it]
+start_acc: 0.7080, end_acc: 0.7457, span_acc: 0.6106, em: 0.6759, f1: 0.8075, loss: 1.8166 ||:   6%|6         | 134/2190 [01:31<1:05:31,  1.91s/it]
+start_acc: 0.7090, end_acc: 0.7453, span_acc: 0.6119, em: 0.6735, f1: 0.8057, loss: 1.8173 ||:   7%|7         | 155/2190 [01:41<50:31,  1.49s/it]  
+start_acc: 0.7071, end_acc: 0.7476, span_acc: 0.6111, em: 0.6733, f1: 0.8068, loss: 1.8091 ||:   8%|7         | 175/2190 [01:51<40:09,  1.20s/it]
+start_acc: 0.7074, end_acc: 0.7468, span_acc: 0.6099, em: 0.6731, f1: 0.8068, loss: 1.8119 ||:   9%|8         | 196/2190 [02:02<32:49,  1.01it/s]
+start_acc: 0.7063, end_acc: 0.7487, span_acc: 0.6110, em: 0.6758, f1: 0.8075, loss: 1.8044 ||:  10%|9         | 218/2190 [02:12<27:21,  1.20it/s]
+start_acc: 0.7051, end_acc: 0.7484, span_acc: 0.6108, em: 0.6743, f1: 0.8068, loss: 1.8066 ||:  11%|#         | 240/2190 [02:24<23:58,  1.36it/s]
+start_acc: 0.7061, end_acc: 0.7504, span_acc: 0.6115, em: 0.6748, f1: 0.8077, loss: 1.7981 ||:  12%|#1        | 262/2190 [02:34<21:06,  1.52it/s]
+start_acc: 0.7081, end_acc: 0.7522, span_acc: 0.6151, em: 0.6777, f1: 0.8087, loss: 1.7923 ||:  13%|#2        | 284/2190 [02:45<19:17,  1.65it/s]
+start_acc: 0.7088, end_acc: 0.7503, span_acc: 0.6148, em: 0.6770, f1: 0.8083, loss: 1.8022 ||:  14%|#3        | 305/2190 [02:57<18:40,  1.68it/s]
+start_acc: 0.7090, end_acc: 0.7507, span_acc: 0.6148, em: 0.6768, f1: 0.8091, loss: 1.8017 ||:  15%|#4        | 326/2190 [03:07<17:32,  1.77it/s]
+start_acc: 0.7103, end_acc: 0.7511, span_acc: 0.6166, em: 0.6783, f1: 0.8095, loss: 1.8019 ||:  16%|#5        | 347/2190 [03:18<16:44,  1.83it/s]
+start_acc: 0.7087, end_acc: 0.7502, span_acc: 0.6147, em: 0.6763, f1: 0.8084, loss: 1.8070 ||:  17%|#6        | 368/2190 [03:28<16:02,  1.89it/s]
+start_acc: 0.7069, end_acc: 0.7501, span_acc: 0.6132, em: 0.6759, f1: 0.8078, loss: 1.8069 ||:  18%|#7        | 389/2190 [03:39<15:43,  1.91it/s]
+start_acc: 0.7055, end_acc: 0.7496, span_acc: 0.6123, em: 0.6749, f1: 0.8070, loss: 1.8145 ||:  19%|#8        | 409/2190 [03:50<15:43,  1.89it/s]
+start_acc: 0.7049, end_acc: 0.7489, span_acc: 0.6117, em: 0.6736, f1: 0.8057, loss: 1.8198 ||:  20%|#9        | 428/2190 [04:01<16:07,  1.82it/s]
+start_acc: 0.7048, end_acc: 0.7483, span_acc: 0.6111, em: 0.6734, f1: 0.8059, loss: 1.8217 ||:  20%|##        | 445/2190 [04:11<16:18,  1.78it/s]
+start_acc: 0.7043, end_acc: 0.7486, span_acc: 0.6115, em: 0.6737, f1: 0.8061, loss: 1.8219 ||:  21%|##1       | 466/2190 [04:21<15:31,  1.85it/s]
+start_acc: 0.7052, end_acc: 0.7480, span_acc: 0.6118, em: 0.6740, f1: 0.8057, loss: 1.8227 ||:  22%|##2       | 487/2190 [04:33<15:39,  1.81it/s]
+start_acc: 0.7053, end_acc: 0.7480, span_acc: 0.6121, em: 0.6738, f1: 0.8055, loss: 1.8232 ||:  23%|##3       | 505/2190 [04:44<15:55,  1.76it/s]
+start_acc: 0.7046, end_acc: 0.7473, span_acc: 0.6111, em: 0.6728, f1: 0.8047, loss: 1.8262 ||:  24%|##3       | 524/2190 [04:54<15:32,  1.79it/s]
+start_acc: 0.7038, end_acc: 0.7470, span_acc: 0.6108, em: 0.6724, f1: 0.8043, loss: 1.8306 ||:  25%|##4       | 544/2190 [05:05<15:03,  1.82it/s]
+start_acc: 0.7037, end_acc: 0.7473, span_acc: 0.6109, em: 0.6727, f1: 0.8040, loss: 1.8272 ||:  26%|##5       | 565/2190 [05:15<14:23,  1.88it/s]
+start_acc: 0.7033, end_acc: 0.7476, span_acc: 0.6104, em: 0.6727, f1: 0.8041, loss: 1.8275 ||:  27%|##6       | 586/2190 [05:26<14:03,  1.90it/s]
+start_acc: 0.7029, end_acc: 0.7471, span_acc: 0.6099, em: 0.6721, f1: 0.8040, loss: 1.8302 ||:  28%|##7       | 606/2190 [05:37<13:51,  1.90it/s]
+start_acc: 0.7025, end_acc: 0.7461, span_acc: 0.6094, em: 0.6714, f1: 0.8033, loss: 1.8310 ||:  29%|##8       | 626/2190 [05:47<13:41,  1.90it/s]
+start_acc: 0.7028, end_acc: 0.7458, span_acc: 0.6097, em: 0.6715, f1: 0.8035, loss: 1.8289 ||:  30%|##9       | 648/2190 [05:57<13:06,  1.96it/s]
+start_acc: 0.7025, end_acc: 0.7461, span_acc: 0.6097, em: 0.6713, f1: 0.8035, loss: 1.8279 ||:  31%|###       | 670/2190 [06:09<12:53,  1.97it/s]
+start_acc: 0.7024, end_acc: 0.7454, span_acc: 0.6094, em: 0.6709, f1: 0.8031, loss: 1.8282 ||:  32%|###1      | 690/2190 [06:20<13:17,  1.88it/s]
+start_acc: 0.7022, end_acc: 0.7454, span_acc: 0.6096, em: 0.6711, f1: 0.8032, loss: 1.8296 ||:  32%|###2      | 709/2190 [06:31<13:10,  1.87it/s]
+start_acc: 0.7018, end_acc: 0.7452, span_acc: 0.6090, em: 0.6707, f1: 0.8028, loss: 1.8295 ||:  33%|###3      | 730/2190 [06:41<12:43,  1.91it/s]
+start_acc: 0.7016, end_acc: 0.7450, span_acc: 0.6085, em: 0.6701, f1: 0.8024, loss: 1.8330 ||:  34%|###4      | 751/2190 [06:51<12:20,  1.94it/s]
+start_acc: 0.7019, end_acc: 0.7450, span_acc: 0.6087, em: 0.6704, f1: 0.8024, loss: 1.8312 ||:  35%|###5      | 772/2190 [07:02<12:15,  1.93it/s]
+start_acc: 0.7024, end_acc: 0.7444, span_acc: 0.6088, em: 0.6701, f1: 0.8022, loss: 1.8321 ||:  36%|###6      | 791/2190 [07:13<12:18,  1.89it/s]
+start_acc: 0.7027, end_acc: 0.7447, span_acc: 0.6092, em: 0.6703, f1: 0.8027, loss: 1.8308 ||:  37%|###6      | 810/2190 [07:24<12:22,  1.86it/s]
+start_acc: 0.7031, end_acc: 0.7441, span_acc: 0.6092, em: 0.6701, f1: 0.8022, loss: 1.8316 ||:  38%|###7      | 829/2190 [07:34<12:17,  1.84it/s]
+start_acc: 0.7034, end_acc: 0.7436, span_acc: 0.6093, em: 0.6700, f1: 0.8020, loss: 1.8327 ||:  39%|###8      | 848/2190 [07:44<12:08,  1.84it/s]
+start_acc: 0.7035, end_acc: 0.7435, span_acc: 0.6089, em: 0.6699, f1: 0.8021, loss: 1.8309 ||:  40%|###9      | 869/2190 [07:55<11:41,  1.88it/s]
+start_acc: 0.7031, end_acc: 0.7432, span_acc: 0.6083, em: 0.6693, f1: 0.8022, loss: 1.8328 ||:  41%|####      | 889/2190 [08:05<11:20,  1.91it/s]
+start_acc: 0.7029, end_acc: 0.7425, span_acc: 0.6078, em: 0.6693, f1: 0.8018, loss: 1.8347 ||:  42%|####1     | 909/2190 [08:15<11:07,  1.92it/s]
+start_acc: 0.7025, end_acc: 0.7422, span_acc: 0.6076, em: 0.6689, f1: 0.8015, loss: 1.8364 ||:  42%|####2     | 929/2190 [08:28<11:29,  1.83it/s]
+start_acc: 0.7026, end_acc: 0.7423, span_acc: 0.6077, em: 0.6689, f1: 0.8016, loss: 1.8357 ||:  43%|####3     | 950/2190 [08:38<10:57,  1.88it/s]
+start_acc: 0.7024, end_acc: 0.7426, span_acc: 0.6077, em: 0.6690, f1: 0.8017, loss: 1.8369 ||:  44%|####4     | 971/2190 [08:50<11:01,  1.84it/s]
+start_acc: 0.7030, end_acc: 0.7426, span_acc: 0.6082, em: 0.6691, f1: 0.8020, loss: 1.8340 ||:  45%|####5     | 991/2190 [09:00<10:36,  1.88it/s]
+start_acc: 0.7029, end_acc: 0.7429, span_acc: 0.6080, em: 0.6687, f1: 0.8018, loss: 1.8328 ||:  46%|####6     | 1011/2190 [09:11<10:33,  1.86it/s]
+start_acc: 0.7027, end_acc: 0.7429, span_acc: 0.6077, em: 0.6684, f1: 0.8018, loss: 1.8334 ||:  47%|####7     | 1031/2190 [09:21<10:17,  1.88it/s]
+start_acc: 0.7028, end_acc: 0.7429, span_acc: 0.6078, em: 0.6686, f1: 0.8021, loss: 1.8344 ||:  48%|####7     | 1051/2190 [09:33<10:29,  1.81it/s]
+start_acc: 0.7024, end_acc: 0.7425, span_acc: 0.6076, em: 0.6683, f1: 0.8018, loss: 1.8379 ||:  49%|####8     | 1068/2190 [09:44<10:40,  1.75it/s]
+start_acc: 0.7021, end_acc: 0.7424, span_acc: 0.6073, em: 0.6680, f1: 0.8016, loss: 1.8393 ||:  50%|####9     | 1088/2190 [09:54<10:14,  1.79it/s]
+start_acc: 0.7019, end_acc: 0.7423, span_acc: 0.6069, em: 0.6673, f1: 0.8012, loss: 1.8407 ||:  51%|#####     | 1111/2190 [10:05<09:24,  1.91it/s]
+start_acc: 0.7021, end_acc: 0.7420, span_acc: 0.6069, em: 0.6671, f1: 0.8010, loss: 1.8411 ||:  52%|#####1    | 1134/2190 [10:17<09:22,  1.88it/s]
+start_acc: 0.7022, end_acc: 0.7416, span_acc: 0.6065, em: 0.6669, f1: 0.8009, loss: 1.8408 ||:  53%|#####2    | 1154/2190 [10:28<09:12,  1.87it/s]
+start_acc: 0.7018, end_acc: 0.7418, span_acc: 0.6063, em: 0.6667, f1: 0.8008, loss: 1.8429 ||:  54%|#####3    | 1176/2190 [10:38<08:40,  1.95it/s]
+start_acc: 0.7020, end_acc: 0.7414, span_acc: 0.6063, em: 0.6665, f1: 0.8008, loss: 1.8424 ||:  55%|#####4    | 1198/2190 [10:51<08:42,  1.90it/s]
+start_acc: 0.7013, end_acc: 0.7411, span_acc: 0.6058, em: 0.6663, f1: 0.8006, loss: 1.8447 ||:  56%|#####5    | 1218/2190 [11:01<08:26,  1.92it/s]
+start_acc: 0.7009, end_acc: 0.7408, span_acc: 0.6053, em: 0.6660, f1: 0.8003, loss: 1.8476 ||:  57%|#####6    | 1239/2190 [11:11<08:03,  1.97it/s]
+start_acc: 0.7009, end_acc: 0.7408, span_acc: 0.6056, em: 0.6665, f1: 0.8004, loss: 1.8471 ||:  58%|#####7    | 1260/2190 [11:22<07:54,  1.96it/s]
+Traceback (most recent call last):
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/bin/allennlp", line 10, in <module>
+    sys.exit(run())
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/run.py", line 18, in run
+    main(prog="allennlp")
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 102, in main
+    args.func(args)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/commands/train.py", line 116, in train_model_from_args
+    args.cache_prefix)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/commands/train.py", line 160, in train_model_from_file
+    cache_directory, cache_prefix)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/commands/train.py", line 243, in train_model
+    metrics = trainer.train()
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/training/trainer.py", line 480, in train
+    train_metrics = self._train_epoch(epoch)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/training/trainer.py", line 322, in _train_epoch
+    loss = self.batch_loss(batch_group, for_training=True)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/training/trainer.py", line 263, in batch_loss
+    output_dict = self.model(**batch)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/models/reading_comprehension/bidaf.py", line 174, in forward
+    embedded_passage = self._highway_layer(self._text_field_embedder(passage))
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/modules/text_field_embedders/basic_text_field_embedder.py", line 110, in forward
+    token_vectors = embedder(*tensors)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/allennlp/modules/token_embedders/bert_token_embedder.py", line 158, in forward
+    attention_mask=util.combine_initial_dims(input_mask))
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 733, in forward
+    output_all_encoded_layers=output_all_encoded_layers)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 406, in forward
+    hidden_states = layer_module(hidden_states, attention_mask)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 391, in forward
+    attention_output = self.attention(hidden_states, attention_mask)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 349, in forward
+    self_output = self.self(input_tensor, attention_mask)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/pytorch_pretrained_bert/modeling.py", line 319, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/modules/dropout.py", line 53, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/functional.py", line 595, in dropout
+    return _functions.dropout.Dropout.apply(input, p, training, inplace)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/_functions/dropout.py", line 36, in forward
+    ctx.noise = cls._make_noise(input)
+  File "/gpfs/hpchome/kakke/.conda/envs/nlp_allen/lib/python3.6/site-packages/torch/nn/_functions/dropout.py", line 10, in _make_noise
+    return input.new().resize_as_(input)
+RuntimeError: CUDA error: out of memory
